@@ -35,48 +35,49 @@ namespace DVLD_Project
 
         private void frmManagePeople_Load(object sender, EventArgs e)
         {
-            dgvManagePeople.DataSource = _dtAllPeople;
+            dgvManagePeople.DataSource = _MyDataTable;
             cmbFilterBy.SelectedIndex = 0;
             lblNumberOfRecords.Text = dgvManagePeople.Rows.Count.ToString();
+
             if (dgvManagePeople.Rows.Count > 0)
             {
 
                 dgvManagePeople.Columns[0].HeaderText = "Person ID";
-                dgvManagePeople.Columns[0].Width = 110;
+                dgvManagePeople.Columns[0].Width = 80;
 
-                dgvManagePeople.Columns[1].HeaderText = "National No.";
-                dgvManagePeople.Columns[1].Width = 120;
+                dgvManagePeople.Columns[1].HeaderText = "National No";
+                dgvManagePeople.Columns[1].Width = 70;
 
 
                 dgvManagePeople.Columns[2].HeaderText = "First Name";
-                dgvManagePeople.Columns[2].Width = 120;
+                dgvManagePeople.Columns[2].Width = 100;
 
                 dgvManagePeople.Columns[3].HeaderText = "Second Name";
-                dgvManagePeople.Columns[3].Width = 140;
+                dgvManagePeople.Columns[3].Width = 100;
 
 
                 dgvManagePeople.Columns[4].HeaderText = "Third Name";
-                dgvManagePeople.Columns[4].Width = 120;
+                dgvManagePeople.Columns[4].Width = 100;
 
                 dgvManagePeople.Columns[5].HeaderText = "Last Name";
-                dgvManagePeople.Columns[5].Width = 120;
+                dgvManagePeople.Columns[5].Width = 100;
 
                 dgvManagePeople.Columns[6].HeaderText = "Gender";
-                dgvManagePeople.Columns[6].Width = 120;
+                dgvManagePeople.Columns[6].Width = 80;
 
                 dgvManagePeople.Columns[7].HeaderText = "Date Of Birth";
-                dgvManagePeople.Columns[7].Width = 140;
+                dgvManagePeople.Columns[7].Width = 120;
 
                 dgvManagePeople.Columns[8].HeaderText = "Nationality";
-                dgvManagePeople.Columns[8].Width = 120;
+                dgvManagePeople.Columns[8].Width = 80;
 
 
                 dgvManagePeople.Columns[9].HeaderText = "Phone";
-                dgvManagePeople.Columns[9].Width = 120;
+                dgvManagePeople.Columns[9].Width = 100;
 
 
                 dgvManagePeople.Columns[10].HeaderText = "Email";
-                dgvManagePeople.Columns[10].Width = 170;
+                dgvManagePeople.Columns[10].Width = 157;
             }
         }
 
@@ -139,16 +140,16 @@ namespace DVLD_Project
             //Reset the filters in case nothing selected or filter value conains nothing.
             if (txtFilter.Text.Trim() == "" || FilterColumn == "None")
             {
-                _dtAllPeople.DefaultView.RowFilter = "";
+                _MyDataTable.DefaultView.RowFilter = "";
                 lblNumberOfRecords.Text = dgvManagePeople.Rows.Count.ToString();
                 return;
             }
 
             if (FilterColumn == "PersonID")
                 //in this case we deal with numbers not string.
-                _dtAllPeople.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilter.Text.Trim());
+                _MyDataTable.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilter.Text.Trim());
             else
-                _dtAllPeople.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilter.Text.Trim());
+                _MyDataTable.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilter.Text.Trim());
 
             lblNumberOfRecords.Text = dgvManagePeople.Rows.Count.ToString();
         }
