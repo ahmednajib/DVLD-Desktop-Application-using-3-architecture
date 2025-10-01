@@ -1,7 +1,8 @@
-﻿using System;
+﻿using DVLD_BuisnessLayer;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
-using DVLD_BuisnessLayer;
 
 namespace DVLD_Project
 {
@@ -14,17 +15,17 @@ namespace DVLD_Project
 
         private static DataTable _dtAllPeople = clsPerson.GetAllPeople();
 
-        private DataTable _MyDataTable = _dtAllPeople.DefaultView.ToTable(false, "Person ID", "National No",
-                                                       "First Name", "Second Name", "Third Name", "Last Name",
-                                                       "Gender", "Date Of Birth", "Nationality",
+        private DataTable _MyDataTable = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
+                                                       "FirstName", "SecondName", "ThirdName", "LastName",
+                                                       "GenderCaption", "DateOfBirth", "CountryName",
                                                        "Phone", "Email");
 
         private void _LoadPeopleData()
         {
             _dtAllPeople = clsPerson.GetAllPeople();
-            _MyDataTable = _dtAllPeople.DefaultView.ToTable(false, "Person ID", "National No",
-                                                       "First Name", "Second Name", "Third Name", "Last Name",
-                                                       "Gender", "Date Of Birth", "Nationality",
+            _MyDataTable = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
+                                                       "FirstName", "SecondName", "ThirdName", "LastName",
+                                                       "GenderCaption", "DateOfBirth", "CountryName",
                                                        "Phone", "Email");
 
             dgvManagePeople.DataSource = _MyDataTable;
@@ -34,7 +35,49 @@ namespace DVLD_Project
 
         private void frmManagePeople_Load(object sender, EventArgs e)
         {
-            _LoadPeopleData();
+            dgvManagePeople.DataSource = _dtAllPeople;
+            cmbFilterBy.SelectedIndex = 0;
+            lblNumberOfRecords.Text = dgvManagePeople.Rows.Count.ToString();
+            if (dgvManagePeople.Rows.Count > 0)
+            {
+
+                dgvManagePeople.Columns[0].HeaderText = "Person ID";
+                dgvManagePeople.Columns[0].Width = 110;
+
+                dgvManagePeople.Columns[1].HeaderText = "National No.";
+                dgvManagePeople.Columns[1].Width = 120;
+
+
+                dgvManagePeople.Columns[2].HeaderText = "First Name";
+                dgvManagePeople.Columns[2].Width = 120;
+
+                dgvManagePeople.Columns[3].HeaderText = "Second Name";
+                dgvManagePeople.Columns[3].Width = 140;
+
+
+                dgvManagePeople.Columns[4].HeaderText = "Third Name";
+                dgvManagePeople.Columns[4].Width = 120;
+
+                dgvManagePeople.Columns[5].HeaderText = "Last Name";
+                dgvManagePeople.Columns[5].Width = 120;
+
+                dgvManagePeople.Columns[6].HeaderText = "Gender";
+                dgvManagePeople.Columns[6].Width = 120;
+
+                dgvManagePeople.Columns[7].HeaderText = "Date Of Birth";
+                dgvManagePeople.Columns[7].Width = 140;
+
+                dgvManagePeople.Columns[8].HeaderText = "Nationality";
+                dgvManagePeople.Columns[8].Width = 120;
+
+
+                dgvManagePeople.Columns[9].HeaderText = "Phone";
+                dgvManagePeople.Columns[9].Width = 120;
+
+
+                dgvManagePeople.Columns[10].HeaderText = "Email";
+                dgvManagePeople.Columns[10].Width = 170;
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -44,50 +87,79 @@ namespace DVLD_Project
 
         private void txtFilter_TextChanged(object sender, EventArgs e) 
         {
-            string filterText = txtFilter.Text.Trim(); // Escape single quotes
-            string selectedFilter = cmbFilterBy.Text;
+            string FilterColumn = "";
 
-            // Show all records if no filter text or "None" is selected
-            if (string.IsNullOrEmpty(filterText) || selectedFilter == "None")
+            switch (cmbFilterBy.Text)
             {
-                _MyDataTable.DefaultView.RowFilter = "";
-                lblNumberOfRecords.Text = (dgvManagePeople.Rows.Count).ToString();
+                case "Person ID":
+                    FilterColumn = "PersonID";
+                    break;
+
+                case "National No":
+                    FilterColumn = "NationalNo";
+                    break;
+
+                case "First Name":
+                    FilterColumn = "FirstName";
+                    break;
+
+                case "Second Name":
+                    FilterColumn = "SecondName";
+                    break;
+
+                case "Third Name":
+                    FilterColumn = "ThirdName";
+                    break;
+
+                case "Last Name":
+                    FilterColumn = "LastName";
+                    break;
+
+                case "Nationality":
+                    FilterColumn = "CountryName";
+                    break;
+
+                case "Gender":
+                    FilterColumn = "GenderCaption";
+                    break;
+
+                case "Phone":
+                    FilterColumn = "Phone";
+                    break;
+
+                case "Email":
+                    FilterColumn = "Email";
+                    break;
+
+                default:
+                    FilterColumn = "None";
+                    break;
+            }
+
+            //Reset the filters in case nothing selected or filter value conains nothing.
+            if (txtFilter.Text.Trim() == "" || FilterColumn == "None")
+            {
+                _dtAllPeople.DefaultView.RowFilter = "";
+                lblNumberOfRecords.Text = dgvManagePeople.Rows.Count.ToString();
                 return;
             }
 
-            // Safety: ensure the column exists
-            if (!_MyDataTable.Columns.Contains(selectedFilter))
-                return;
-
-            string filterExpression;
-
-            if (selectedFilter == "Person ID")
-            {
-                //integer filtering
-                filterExpression = $"[{selectedFilter}] = {filterText}";
-            }
+            if (FilterColumn == "PersonID")
+                //in this case we deal with numbers not string.
+                _dtAllPeople.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilter.Text.Trim());
             else
-            {
-                // String filtering
-                filterExpression = $"[{selectedFilter}] LIKE '%{filterText}%'";
-            }
+                _dtAllPeople.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilter.Text.Trim());
 
-            _MyDataTable.DefaultView.RowFilter = filterExpression;
-            lblNumberOfRecords.Text = (dgvManagePeople.Rows.Count).ToString();
+            lblNumberOfRecords.Text = dgvManagePeople.Rows.Count.ToString();
         }
 
         private void cmbFilterBy_TextChanged(object sender, EventArgs e)
         {
-            if (cmbFilterBy.Text == "None")
-            {
-                txtFilter.Visible = false;
-                _MyDataTable.DefaultView.RowFilter = ""; // Show all records again
-            }
-            else
-            {
-                txtFilter.Visible = true;
+            txtFilter.Visible = (cmbFilterBy.Text != "None");
 
-                txtFilter.Clear();
+            if (txtFilter.Visible)
+            {
+                txtFilter.Text = "";
                 txtFilter.Focus();
             }
         }

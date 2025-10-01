@@ -15,9 +15,20 @@ namespace DVLD_DataAccessLayer
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT 'Person ID'=PersonID, 'National No'= NationalNo, 'First Name'=FirstName, 'Second Name'=SecondName, " +
-                "'Third Name'=ThirdName,'Last Name'=LastName, 'Date Of Birth'=DateOfBirth, Gender = CASE Gender \r\nWHEN 0 THEN 'Male' \r\nWHEN 1 THEN 'Female' \r\nEND," +
-                " Address, Phone, Email, Nationality=C.CountryName, 'Image Path'=ImagePath\r\n  FROM People P join Countries C ON (P.NationalityCountryID = C.CountryID)";
+            string query = @"SELECT People.PersonID, People.NationalNo,
+              People.FirstName, People.SecondName, People.ThirdName, People.LastName,
+			  People.DateOfBirth, People.Gender,  
+				  CASE
+                  WHEN People.Gender = 0 THEN 'Male'
+
+                  ELSE 'Female'
+
+                  END as GenderCaption ,
+			  People.Address, People.Phone, People.Email, 
+              People.NationalityCountryID, Countries.CountryName, People.ImagePath
+              FROM            People INNER JOIN
+                         Countries ON People.NationalityCountryID = Countries.CountryID
+                ORDER BY People.FirstName";
 
             SqlCommand command = new SqlCommand(query, connection);
 
