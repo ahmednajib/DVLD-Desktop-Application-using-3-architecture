@@ -9,90 +9,88 @@ namespace DVLD_DataAccessLayer
     {
         public static bool GetCountryIDByName(string CountryName, ref int CountryID)
         {
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "SELECT CountryID FROM Countries WHERE CountryName = @CountryName";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@CountryName", CountryName);
-
             bool IsFound = false;
 
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetCountryIDByName", connection))
             {
-                connection.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@CountryName", CountryName);
 
-                object result = command.ExecuteScalar();
-                if (result != null)
+                try
                 {
-                    IsFound = true;
-                    CountryID = Convert.ToInt32(result);
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        CountryID = Convert.ToInt32(result);
+                        IsFound = true;
+                    }
                 }
-                return IsFound;
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                    IsFound = false;
+                }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                return false;
-            }
-            finally
-            {
-                connection.Close();
-            }
+            return IsFound;
         }
 
         public static bool GetCountryNameByID(int CountryID, ref string CountryName)
         {
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "SELECT CountryName FROM Countries WHERE CountryID = @CountryID";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@CountryID", CountryID);
-
             bool IsFound = false;
 
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetCountryNameByID", connection))
             {
-                connection.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@CountryID", CountryID);
 
-                object result = command.ExecuteScalar();
-                if (result != null)
+                try
                 {
-                    IsFound = true;
-                    CountryName = result.ToString();
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        CountryName = result.ToString();
+                        IsFound = true;
+                    }
                 }
-                return IsFound;
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                    IsFound = false;
+                }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                return false;
-            }
-            finally
-            {
-                connection.Close();
-            }
+            return IsFound;
         }
 
         public static DataTable GetAllCountries()
         {
             DataTable dtCountries = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "SELECT CountryID, CountryName FROM Countries Order By CountryName";
-            SqlCommand command = new SqlCommand(query, connection);
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
-                    dtCountries.Load(reader);
 
-                reader.Close();
-            }
-            catch (Exception ex)
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetAllCountries", connection))
             {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                connection.Close();
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            dtCountries.Load(reader);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                }
             }
             return dtCountries;
         }
