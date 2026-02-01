@@ -11,147 +11,112 @@ namespace DVLD_DataAccessLayer
         {
             int ApplicationTypeID = -1;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"Insert Into ApplicationTypes (ApplicationTypeTitle,ApplicationFees)
-                            Values (@Title,@Fees)
-                            
-                            SELECT SCOPE_IDENTITY();";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@Title", Title);
-            command.Parameters.AddWithValue("@Fees", Fees);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_AddNewApplicationType", connection))
             {
-                connection.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Title", Title);
+                command.Parameters.AddWithValue("@Fees", Fees);
 
-                object result = command.ExecuteScalar();
-
-                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                try
                 {
-                    ApplicationTypeID = insertedID;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+
+                    if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                    {
+                        ApplicationTypeID = insertedID;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
                 }
             }
-
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
             return ApplicationTypeID;
         }
 
         public static DataTable GetApplicationTypes()
         {
             DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT * FROM ApplicationTypes";
-            SqlCommand cmd = new SqlCommand(query, connection);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetAllApplicationTypes", connection))
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+                command.CommandType = CommandType.StoredProcedure;
 
-                if (reader.HasRows)
+                try
                 {
-                    dt.Load(reader);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows) dt.Load(reader);
+                    }
                 }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
+                catch (Exception ex)
                 {
-                    connection.Close();
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
                 }
             }
             return dt;
         }
 
-        public static bool UpdateApplicationType(int applicationTypeId, string applicationTypeTitle, int applicationFees)
+        public static bool UpdateApplicationType(int applicationTypeId, string applicationTypeTitle, float applicationFees)
         {
             int rowsAffected = 0;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "UPDATE ApplicationTypes SET ApplicationTypeTitle = @ApplicationTypeTitle, ApplicationFees = @ApplicationFees WHERE ApplicationTypeId = @ApplicationTypeId";
-            SqlCommand cmd = new SqlCommand(query, connection);
-
-            cmd.Parameters.AddWithValue("@ApplicationTypeId", applicationTypeId);
-            cmd.Parameters.AddWithValue("@ApplicationTypeTitle", applicationTypeTitle);
-            cmd.Parameters.AddWithValue("@ApplicationFees", applicationFees);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_UpdateApplicationType", connection))
             {
-                connection.Open();
-                rowsAffected = cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                return false;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ApplicationTypeID", applicationTypeId);
+                command.Parameters.AddWithValue("@Title", applicationTypeTitle);
+                command.Parameters.AddWithValue("@Fees", applicationFees);
+
+                try
                 {
-                    connection.Close();
+                    connection.Open();
+                    rowsAffected = command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                    return false;
                 }
             }
             return rowsAffected > 0;
         }
 
-        public static bool GetApplicationTypeInfoByID(int applicationTypeId, ref string applicationTypeTitle, ref int applicationFees)
+        public static bool GetApplicationTypeInfoByID(int applicationTypeId, ref string applicationTypeTitle, ref float applicationFees)
         {
-            bool isfound = false;
+            bool isFound = false;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "SELECT * From ApplicationTypes WHERE ApplicationTypeId = @ApplicationTypeId";
-
-            SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@ApplicationTypeId", applicationTypeId);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetApplicationTypeInfoByID", connection))
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ApplicationTypeID", applicationTypeId);
+
+                try
                 {
-                    applicationTypeTitle = reader["ApplicationTypeTitle"].ToString();
-                    applicationFees = Convert.ToInt32(reader["ApplicationFees"]);
-                    isfound = true;
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            applicationTypeTitle = (string)reader["ApplicationTypeTitle"];
+                            applicationFees = Convert.ToSingle(reader["ApplicationFees"]);
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    isfound = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                return false;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                {
-                    connection.Close();
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                    isFound = false;
                 }
             }
-            return isfound;
+            return isFound;
         }
     }
 }

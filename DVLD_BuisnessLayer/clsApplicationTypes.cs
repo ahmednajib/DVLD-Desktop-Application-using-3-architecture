@@ -13,7 +13,7 @@ namespace DVLD_BuisnessLayer
 
         public string ApplicationTypeTitle { get; set; }
 
-        public int ApplicationFees { get; set; }
+        public float ApplicationFees { get; set; }
 
         public clsApplicationTypes()
         {
@@ -24,7 +24,7 @@ namespace DVLD_BuisnessLayer
             Mode = enMode.AddNew;
         }
 
-        private clsApplicationTypes(int applicationTypeId, string applicationTypeTitle, int applicationFees)
+        private clsApplicationTypes(int applicationTypeId, string applicationTypeTitle, float applicationFees)
         {
             ApplicationTypeId = applicationTypeId;
             ApplicationTypeTitle = applicationTypeTitle;
@@ -53,7 +53,7 @@ namespace DVLD_BuisnessLayer
         public static clsApplicationTypes Find(int ApplicationTypeID)
         {
             string ApplicationTypeTitle = string.Empty;
-            int ApplicationFees = 0;
+            float ApplicationFees = 0;
 
             if (clsApplicationTypesData.GetApplicationTypeInfoByID(ApplicationTypeID, ref ApplicationTypeTitle, ref ApplicationFees))
                 return new clsApplicationTypes(ApplicationTypeID, ApplicationTypeTitle, ApplicationFees);
