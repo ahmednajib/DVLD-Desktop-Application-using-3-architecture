@@ -1,159 +1,94 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVLD_DataAccessLayer
 {
     public class clsTestData
     {
-        public static bool GetTestInfoByID(int TestID,ref int TestAppointmentID, 
-            ref bool TestResult, ref string Notes, ref int CreatedByUserID)
+        public static bool GetTestInfoByID(int TestID, ref int TestAppointmentID, ref bool TestResult, ref string Notes, ref int CreatedByUserID)
         {
             bool isFound = false;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "SELECT * FROM Tests WHERE TestID = @TestID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@TestID", TestID);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetTestInfoByID", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@TestID", TestID);
 
-                if (reader.Read())
+                try
                 {
-
-                    // The record was found
-                    isFound = true;
-
-                    TestAppointmentID = (int)reader["TestAppointmentID"];
-                    TestResult = (bool)reader["TestResult"];
-                    if (reader["Notes"] == DBNull.Value)
-
-                        Notes = "";
-                    else
-                        Notes = (string)reader["Notes"];
-
-                    CreatedByUserID = (int)reader["CreatedByUserID"];
-
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            TestAppointmentID = Convert.ToInt32(reader["TestAppointmentID"]);
+                            TestResult = Convert.ToBoolean(reader["TestResult"]);
+                            Notes = reader["Notes"] == DBNull.Value ? "" : Convert.ToString(reader["Notes"]);
+                            CreatedByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    // The record was not found
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
                     isFound = false;
                 }
-
-                reader.Close();
-
-
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                isFound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
             return isFound;
         }
 
-        public static int AddNewTest(int TestAppointmentID, 
-            bool TestResult, string Notes, int CreatedByUserID)
+        public static int AddNewTest(int TestAppointmentID, bool TestResult, string Notes, int CreatedByUserID)
         {
             int TestID = -1;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"Insert Into Tests (TestAppointmentID,TestResult,
-                                                Notes,   CreatedByUserID)
-                            Values (@TestAppointmentID,@TestResult,
-                                                @Notes,@CreatedByUserID);
-                            
-                                UPDATE TestAppointments 
-                                SET IsLocked=1 where TestAppointmentID = @TestAppointmentID;
-                                SELECT SCOPE_IDENTITY();";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
-            command.Parameters.AddWithValue("@TestResult", TestResult);
-
-            if (Notes != "" && Notes != null)
-                command.Parameters.AddWithValue("@Notes", Notes);
-            else
-                command.Parameters.AddWithValue("@Notes", System.DBNull.Value);
-
-            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_AddNewTest", connection))
             {
-                connection.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+                command.Parameters.AddWithValue("@TestResult", TestResult);
+                command.Parameters.AddWithValue("@Notes", string.IsNullOrEmpty(Notes) ? DBNull.Value : (object)Notes);
+                command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
-                object result = command.ExecuteScalar();
-
-                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                try
                 {
-                    TestID = insertedID;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                    {
+                        TestID = insertedID;
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                connection.Close();
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
             return TestID;
         }
 
-        public static bool UpdateTest(int TestID, int TestAppointmentID, 
-            bool TestResult, string Notes, int CreatedByUserID)
+        public static bool UpdateTest(int TestID, int TestAppointmentID, bool TestResult, string Notes, int CreatedByUserID)
         {
-
             int rowsAffected = 0;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"Update  Tests  
-                            set TestAppointmentID = @TestAppointmentID,
-                                TestResult=@TestResult,
-                                Notes = @Notes,
-                                CreatedByUserID=@CreatedByUserID
-                                where TestID = @TestID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@TestID", TestID);
-            command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
-            command.Parameters.AddWithValue("@TestResult", TestResult);
-            command.Parameters.AddWithValue("@Notes", Notes);
-            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_UpdateTest", connection))
             {
-                connection.Open();
-                rowsAffected = command.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                return false;
-            }
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@TestID", TestID);
+                command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+                command.Parameters.AddWithValue("@TestResult", TestResult);
+                command.Parameters.AddWithValue("@Notes", string.IsNullOrEmpty(Notes) ? DBNull.Value : (object)Notes);
+                command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
-            finally
-            {
-                connection.Close();
+                try
+                {
+                    connection.Open();
+                    rowsAffected = command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                    return false;
+                }
             }
             return (rowsAffected > 0);
         }
@@ -161,37 +96,23 @@ namespace DVLD_DataAccessLayer
         public static byte GetPassedTestCount(int LDLApplicationID)
         {
             byte PassedTestCount = 0;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"SELECT PassedTestCount = count(TestTypeID)
-                         FROM Tests INNER JOIN
-                         TestAppointments ON Tests.TestAppointmentID = TestAppointments.TestAppointmentID
-						 where LocalDrivingLicenseApplicationID =@LocalDrivingLicenseApplicationID and TestResult=1";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LDLApplicationID);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetPassedTestCount", connection))
             {
-                connection.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LDLApplicationID);
 
-                object result = command.ExecuteScalar();
-
-                if (result != null && byte.TryParse(result.ToString(), out byte ptCount))
+                try
                 {
-                    PassedTestCount = ptCount;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        PassedTestCount = Convert.ToByte(result);
+                    }
                 }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
             return PassedTestCount;
         }
     }

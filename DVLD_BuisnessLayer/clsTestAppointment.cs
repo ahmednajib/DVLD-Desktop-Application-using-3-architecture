@@ -22,7 +22,6 @@ namespace DVLD_BuisnessLayer
         public int TestID
         {
             get { return _GetTestID(); }
-
         }
 
         public clsTestAppointment()
