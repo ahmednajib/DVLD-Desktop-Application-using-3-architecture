@@ -10,35 +10,20 @@ namespace DVLD_DataAccessLayer
         public static DataTable GetAllLocalDrivingLicenseApplications()
         {
             DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"SELECT *
-                              FROM LocalDrivingLicenseApplications_View
-                              order by ApplicationDate Desc";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetAllLocalDrivingLicenseApplications", connection))
             {
-                connection.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-
+                command.CommandType = CommandType.StoredProcedure;
+                
+                try
                 {
-                    dt.Load(reader);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows) dt.Load(reader);
+                    }
                 }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                connection.Close();
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
             return dt;
         }
@@ -46,467 +31,221 @@ namespace DVLD_DataAccessLayer
         public static bool GetLocalDrivingLicenseApplicationInfoByID(int LocalDrivingLicenseApplicationID, ref int ApplicationID, ref int LicenseClassID)
         {
             bool isFound = false;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "SELECT * FROM LocalDrivingLicenseApplications WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetLocalDrivingLicenseApplicationInfoByID", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@LDLApplicationID", LocalDrivingLicenseApplicationID);
+                
+                try
                 {
-                    // The record was found
-                    isFound = true;
-
-                    ApplicationID = (int)reader["ApplicationID"];
-                    LicenseClassID = (int)reader["LicenseClassID"];
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            ApplicationID = (int)reader["ApplicationID"];
+                            LicenseClassID = (int)reader["LicenseClassID"];
+                        }
+                    }
                 }
-                else
-                {
-                    // The record was not found
-                    isFound = false;
-                }
-
-                reader.Close();
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                isFound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
             return isFound;
         }
 
         public static bool GetLocalDrivingLicenseApplicationInfoByApplicationID(int ApplicationID, ref int LDLApplicationID, ref int LicenseClassID)
         {
             bool isFound = false;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "SELECT * FROM LocalDrivingLicenseApplications WHERE ApplicationID = @ApplicationID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetLocalDrivingLicenseApplicationInfoByApplicationID", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+               
+                try
                 {
-
-                    // The record was found
-                    isFound = true;
-
-                    LDLApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
-                    LicenseClassID = (int)reader["LicenseClassID"];
-
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            LDLApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
+                            LicenseClassID = (int)reader["LicenseClassID"];
+                        }
+                    }
                 }
-                else
-                {
-                    // The record was not found
-                    isFound = false;
-                }
-
-                reader.Close();
-
-
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                isFound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
             return isFound;
         }
 
         public static int AddNewLocalDrivingLicenseApplication(int ApplicationID, int LicenseClassID)
         {
-            //this function will return the new person id if succeeded and -1 if not.
-            int LocalDrivingLicenseApplicationID = -1;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"INSERT INTO LocalDrivingLicenseApplications ( 
-                            ApplicationID,LicenseClassID)
-                             VALUES (@ApplicationID,@LicenseClassID);
-                             SELECT SCOPE_IDENTITY();";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("ApplicationID", ApplicationID);
-            command.Parameters.AddWithValue("LicenseClassID", LicenseClassID);
-
-            try
+            int LDLAppID = -1;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_AddNewLocalDrivingLicenseApplication", connection))
             {
-                connection.Open();
-
-                object result = command.ExecuteScalar();
-
-                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+                command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+                
+                try
                 {
-                    LocalDrivingLicenseApplicationID = insertedID;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int insertedID)) LDLAppID = insertedID;
                 }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-
-            finally
-            {
-                connection.Close();
-            }
-            return LocalDrivingLicenseApplicationID;
+            return LDLAppID;
         }
 
         public static bool UpdateLocalDrivingLicenseApplication(int LDLApplicationID, int ApplicationID, int LicenseClassID)
         {
             int rowsAffected = 0;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"Update  LocalDrivingLicenseApplications  
-                            set ApplicationID = @ApplicationID,
-                                LicenseClassID = @LicenseClassID
-                            where LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LDLApplicationID);
-            command.Parameters.AddWithValue("ApplicationID", ApplicationID);
-            command.Parameters.AddWithValue("LicenseClassID", LicenseClassID);
-
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_UpdateLocalDrivingLicenseApplication", connection))
             {
-                connection.Open();
-                rowsAffected = command.ExecuteNonQuery();
-
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@LDLApplicationID", LDLApplicationID);
+                command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+                command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+                
+                try { connection.Open(); rowsAffected = command.ExecuteNonQuery(); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                return false;
-            }
-
-            finally
-            {
-                connection.Close();
-            }
-
             return (rowsAffected > 0);
         }
 
         public static bool DeleteLocalDrivingLicenseApplication(int LDLApplicationID)
         {
             int rowsAffected = 0;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"Delete LocalDrivingLicenseApplications 
-                                where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LDLApplicationID);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_DeleteLocalDrivingLicenseApplication", connection))
             {
-                connection.Open();
-
-                rowsAffected = command.ExecuteNonQuery();
-
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@LDLApplicationID", LDLApplicationID);
+                
+                try { connection.Open(); rowsAffected = command.ExecuteNonQuery(); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
             return (rowsAffected > 0);
         }
 
         public static bool IsPersonHasActiveApplication(int PersonID, int ApplicationType, int ClassID)
         {
-            bool isFound = false;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT Found=1 FROM Applications A join LocalDrivingLicenseApplications LDLA 
-                            ON (LDLA.ApplicationID = A.ApplicationID)
-                            where ApplicantPersonID = @ApplicantPersonID 
-                            and ApplicationTypeID = @ApplicationTypeID and 
-                            LDLA.LicenseClassID = @LicenseClassID and A.ApplicationStatus = 1";
-
-            // ApplicationStatus = 1 indicates an active application
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@ApplicantPersonID", PersonID);
-            command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationType);
-            command.Parameters.AddWithValue("@LicenseClassID", ClassID);
-            try
+            bool found = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_IsPersonHasActiveApplication", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    isFound = true;
-                }
-                reader.Close();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PersonID", PersonID);
+                command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationType);
+                command.Parameters.AddWithValue("@LicenseClassID", ClassID);
+                
+                try { connection.Open(); found = (command.ExecuteScalar() != null); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                isFound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return isFound;
+            return found;
         }
 
         public static bool IsPersonAlreadyHasLicense(int PersonID, int ClassID)
         {
-            bool Isfound = false;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT        Licenses.LicenseID
-                            FROM Licenses INNER JOIN
-                                                     Drivers ON Licenses.DriverID = Drivers.DriverID
-                            WHERE  
-                             
-                             Licenses.LicenseClass = @LicenseClass
-                              AND Drivers.PersonID = @PersonID
-                              And IsActive=1;";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@LicenseClass", ClassID);
-
-            try
+            bool found = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_IsPersonAlreadyHasLicense", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    Isfound = true;
-                }
-                reader.Close();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PersonID", PersonID);
+                command.Parameters.AddWithValue("@LicenseClassID", ClassID);
+                
+                try { connection.Open(); found = (command.ExecuteScalar() != null); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                Isfound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return Isfound;
+            return found;
         }
 
-        public static int GetActiveLicenseIDByPersonID(int ApplicantPersonID, int LicenseClassID)
+        public static int GetActiveLicenseIDByPersonID(int PersonID, int ClassID)
         {
-            int ActiveLicenseID = -1;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"SELECT LicenseID from Licenses L join drivers D ON (L.DriverID = D.DriverID)
-                             Where L.LicenseClass = @LicenseClassID and L.IsActive = 'True' and D.PersonID = @PersonID";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@PersonID", ApplicantPersonID);
-            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
-
-            try
+            int licenseID = -1;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetActiveLicenseIDByPersonID", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    // The record was found
-                    ActiveLicenseID = (int)reader["LicenseID"];
-                }
-                else
-                {
-                    // The record was not found
-                    ActiveLicenseID = -1;
-                }
-                reader.Close();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PersonID", PersonID);
+                command.Parameters.AddWithValue("@LicenseClassID", ClassID);
+                
+                try { connection.Open(); object result = command.ExecuteScalar(); if (result != null) licenseID = Convert.ToInt32(result); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                ActiveLicenseID = -1;
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return ActiveLicenseID;
+            return licenseID;
         }
 
-        public static bool DoesPassTestType(int LocalDrivingLicenseApplicationID, int TestType)
+        public static bool DoesPassTestType(int LDLApplicationID, int TestType)
         {
-            bool isPassed = false;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT Found=1 FROM TestAppointments TA join Tests T ON (TA.TestAppointmentID = T.TestAppointmentID) 
-                            WHERE TA.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID 
-                            AND TA.TestTypeID = @TestTypeID AND T.TestResult = 1";
-
-            // TestResult = True indicates that the test was passed
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-            command.Parameters.AddWithValue("@TestTypeID", TestType);
-            try
+            bool passed = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_DoesPassTestType", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    isPassed = true;
-                }
-                reader.Close();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LDLApplicationID);
+                command.Parameters.AddWithValue("@TestTypeID", TestType);
+                
+                try { connection.Open(); passed = (command.ExecuteScalar() != null); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                isPassed = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return isPassed;
+            return passed;
         }
 
-        public static bool DoesAttendTestBefore(int LocalDrivingLicenseApplicationID, int TestType)
+        public static bool DoesAttendTestBefore(int LDLApplicationID, int TestType)
         {
-            bool isPassed = false;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT Found=1 FROM TestAppointments TA join Tests T ON (TA.TestAppointmentID = T.TestAppointmentID)
-                            WHERE TA.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID
-                            AND TA.TestTypeID = @TestTypeID";
-
-            // TestResult = True indicates that the test was passed
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-            command.Parameters.AddWithValue("@TestTypeID", TestType);
-
-            try
+            bool attended = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_DoesAttendTestBefore", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    isPassed = true;
-                }
-                reader.Close();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LDLApplicationID);
+                command.Parameters.AddWithValue("@TestTypeID", TestType);
+                
+                try { connection.Open(); attended = (command.ExecuteScalar() != null); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                isPassed = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return isPassed;
+            return attended;
         }
 
-        public static int TrialsperTestType(int LocalDrivingLicenseApplicationID, int TestType)
+        public static int TrialsperTestType(int LDLApplicationID, int TestType)
         {
-            byte TotalTrialsPerTest = 0;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT COUNT(TestID) FROM TestAppointments TA
-                            JOIN Tests T ON (TA.TestAppointmentID = T.TestAppointmentID) 
-                            WHERE TA.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID 
-                            AND TA.TestTypeID = @TestTypeID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-            command.Parameters.AddWithValue("@TestTypeID", TestType);
-
-            try
+            int trialsCount = 0;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_TrialsPerTestType", connection))
             {
-                connection.Open();
-                object result = command.ExecuteScalar();
-                if (result != null && byte.TryParse(result.ToString(), out byte trials))
-                {
-                    TotalTrialsPerTest = trials;
-                }
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LDLApplicationID);
+                command.Parameters.AddWithValue("@TestTypeID", TestType);
+                
+                try { connection.Open(); trialsCount = Convert.ToInt32(command.ExecuteScalar()); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return TotalTrialsPerTest;
+            return trialsCount;
         }
 
-        public static bool IsThereAnActiveScheduledTest(int LocalDrivingLicenseApplicationID, int TestType)
+        public static bool IsThereAnActiveScheduledTest(int LDLApplicationID, int TestType)
         {
-            bool isFound = false;
-
-            // This function checks if there is an active scheduled test for the given application ID and test type.
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT Found=1 FROM TestAppointments 
-                            WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID 
-                            AND TestTypeID = @TestTypeID AND IsLocked = 0
-                            ORDER BY TestAppointments.TestAppointmentID desc";
-            
-            // IsLocked = 0 indicates that the test is scheduled
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-            command.Parameters.AddWithValue("@TestTypeID", TestType);
-            
-            try
+            bool active = false;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_IsThereAnActiveScheduledTest", connection))
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    isFound = true;
-                }
-                reader.Close();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LDLApplicationID);
+                command.Parameters.AddWithValue("@TestTypeID", TestType);
+                
+                try { connection.Open(); active = (command.ExecuteScalar() != null); }
+                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                isFound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return isFound;
+            return active;
         }
     }
 }
