@@ -42,7 +42,7 @@ namespace DVLD_BuisnessLayer
             Mode = enMode.Update;
         }
 
-        private bool _AddNewPerson()
+        private bool _AddNewUser()
         {
             //call DataAccess Layer 
 
@@ -50,7 +50,7 @@ namespace DVLD_BuisnessLayer
             return (this.UserID != -1);
         }
 
-        private bool _UpdatePerson()
+        private bool _UpdateUser()
         {
             //call DataAccess Layer 
             return clsUserData.UpdateUser(this.UserID, this.PersonID, this.UserName, this.Password, this.IsActive);
@@ -64,17 +64,6 @@ namespace DVLD_BuisnessLayer
 
             return clsUserData.GetUserInfoByUserID(UserID, ref personID, ref userName, ref password, ref isActive)
                 ? new clsUser(UserID, personID, userName, password, isActive)
-                : null;
-        }
-
-        public static clsUser FindByPersonID(int PersonID)
-        {
-            int userID = -1;
-            string userName = "", password = "";
-            bool isActive = false;
-
-            return clsUserData.GetUserInfoByPersonID(PersonID, ref userID, ref userName, ref password, ref isActive)
-                ? new clsUser(userID, PersonID, userName, password, isActive)
                 : null;
         }
 
@@ -98,7 +87,7 @@ namespace DVLD_BuisnessLayer
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewPerson())
+                    if (_AddNewUser())
                     {
                         Mode = enMode.Update; // Change mode to Update after successful addition
                         return true;
@@ -108,7 +97,7 @@ namespace DVLD_BuisnessLayer
                         return false;
                     }
                 case enMode.Update:
-                    return _UpdatePerson();
+                    return _UpdateUser();
             }
             return false;
         }
