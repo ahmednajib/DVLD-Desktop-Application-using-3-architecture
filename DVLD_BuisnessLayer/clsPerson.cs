@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Net;
-using System.Security.Policy;
 using DVLD_DataAccessLayer;
 
 namespace DVLD_BuisnessLayer
