@@ -51,7 +51,7 @@ namespace DVLD_BuisnessLayer
         {
             //call DataAccess Layer 
 
-            this.UserID = clsUserData.AddNewPerson(this.PersonID, this.UserName, this.Password, this.IsActive);
+            this.UserID = clsUserData.AddNewUser(this.PersonID, this.UserName, this.Password, this.IsActive);
             return (this.UserID != -1);
         }
 

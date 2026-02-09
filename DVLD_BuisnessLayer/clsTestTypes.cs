@@ -17,7 +17,7 @@ namespace DVLD_BuisnessLayer
 
         public string TestTypeDescription { get; set; }
 
-        public int TestFees { get; set; }
+        public float TestFees { get; set; }
         
         public clsTestTypes()
         {
@@ -29,7 +29,7 @@ namespace DVLD_BuisnessLayer
             Mode = enMode.AddNew;
         }
 
-        private clsTestTypes(enTestType ID, string testTypeDescription, string testTypeTitle, int testFees)
+        private clsTestTypes(enTestType ID, string testTypeDescription, string testTypeTitle, float testFees)
         {
             this.ID = ID;
             this.TestTypeTitle = testTypeTitle;
@@ -59,7 +59,7 @@ namespace DVLD_BuisnessLayer
         public static clsTestTypes Find(enTestType TestTypeID)
         {
             string TestTypeTitle = string.Empty, TestTypeDescription = "";
-            int TestFees = 0;
+            float TestFees = 0;
 
             if (clsTestTypesData.GetTestTypeInfoByID( (int) TestTypeID, ref TestTypeTitle, ref TestTypeDescription, ref TestFees))
                 return new clsTestTypes(TestTypeID, TestTypeDescription, TestTypeTitle, TestFees);

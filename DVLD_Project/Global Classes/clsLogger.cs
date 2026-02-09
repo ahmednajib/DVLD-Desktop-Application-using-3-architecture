@@ -27,12 +27,12 @@ namespace DVLD_Project.Global_Classes
         private static string _FormatErrorMessage(Exception ex)
         {
             string message =
-                 $"--- Exception Log ---\n" +
-                 $"Timestamp: {DateTime.Now}\n" +
-                 $"Message: {ex.Message}\n" +
-                 $"Inner Exception: {(ex.InnerException != null ? ex.InnerException.Message : "N/A")}\n" +
-                 $"Stack Trace: {ex.StackTrace}\n" +
-                 $"Source: {ex.Source}\n" +
+                 $"--- Exception Log ---\n\n" +
+                 $"Timestamp: {DateTime.Now}\n\n" +
+                 $"Message: {ex.Message}\n\n" +
+                 $"Inner Exception: {(ex.InnerException != null ? ex.InnerException.Message : "N/A")}\n\n" +
+                 $"Stack Trace: {ex.StackTrace}\n\n" +
+                 $"Source: {ex.Source}\n\n" +
                  $"-----------------------";
 
             return message;

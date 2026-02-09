@@ -201,6 +201,5 @@ namespace DVLD_Project.Users
                 errorProvider1.SetError(txtConfirmPassword, null);
             }
         }
-
     }
 }

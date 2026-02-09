@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVLD_DataAccessLayer
 {
@@ -14,32 +10,23 @@ namespace DVLD_DataAccessLayer
         public static DataTable GetTestTypes()
         {
             DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT * FROM TestTypes";
-            SqlCommand cmd = new SqlCommand(query, connection);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetTestTypes", connection))
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+                command.CommandType = CommandType.StoredProcedure;
 
-                if (reader.HasRows)
+                try
                 {
-                    dt.Load(reader);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows) dt.Load(reader);
+                    }
                 }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
+                catch (Exception ex)
                 {
-                    connection.Close();
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
                 }
             }
             return dt;
@@ -47,119 +34,92 @@ namespace DVLD_DataAccessLayer
 
         public static int AddNewTestType(string Title, string Description, float Fees)
         {
-            int ApplicationTypeID = -1;
+            int insertedID = -1;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"Insert Into TestTypes (TestTypeTitle, TestTypeDescription,TestTypeFees)
-                            Values (@Title, @Description, @Fees)
-                            SELECT SCOPE_IDENTITY();";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@Title", Title);
-            command.Parameters.AddWithValue("@Description", Description);
-            command.Parameters.AddWithValue("@Fees", Fees);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_AddNewTestType", connection))
             {
-                connection.Open();
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Title", Title);
+                command.Parameters.AddWithValue("@Description", Description);
+                command.Parameters.AddWithValue("@Fees", Fees);
 
-                object result = command.ExecuteScalar();
-
-                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                try
                 {
-                    ApplicationTypeID = insertedID;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+
+                    if (result != null && int.TryParse(result.ToString(), out int id))
+                    {
+                        insertedID = id;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
                 }
             }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-
-            return ApplicationTypeID;
-
+            return insertedID;
         }
 
-        public static bool UpdateTestType(int ID, string Title, string Description, int Fees)
+        public static bool UpdateTestType(int ID, string Title, string Description, float Fees)
         {
             int rowsAffected = 0;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "UPDATE TestTypes SET TestTypeTitle = @Title, TestTypeDescription = @Description, TestTypeFees = @Fees WHERE TestTypeId = @ID";
-            SqlCommand cmd = new SqlCommand(query, connection);
-
-            cmd.Parameters.AddWithValue("@ID", ID);
-            cmd.Parameters.AddWithValue("@Title", Title);
-            cmd.Parameters.AddWithValue("@Description", Description);
-            cmd.Parameters.AddWithValue("@Fees", Fees);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_UpdateTestType", connection))
             {
-                connection.Open();
-                rowsAffected = cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                return false;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ID", ID);
+                command.Parameters.AddWithValue("@Title", Title);
+                command.Parameters.AddWithValue("@Description", Description);
+                command.Parameters.AddWithValue("@Fees", Fees);
+
+                try
                 {
-                    connection.Close();
+                    connection.Open();
+                    rowsAffected = command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                    return false;
                 }
             }
             return rowsAffected > 0;
         }
 
-        public static bool GetTestTypeInfoByID(int ID, ref string Title, ref string Description, ref int Fees)
+        public static bool GetTestTypeInfoByID(int ID, ref string Title, ref string Description, ref float Fees)
         {
-            bool isfound = false;
+            bool isFound = false;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "SELECT * From TestTypes WHERE TestTypeId = @ID";
-
-            SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@ID", ID);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetTestTypeInfoByID", connection))
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ID", ID);
+
+                try
                 {
-                    Title = reader["TestTypeTitle"].ToString();
-                    Description = reader["TestTypeDescription"].ToString();
-                    Fees = Convert.ToInt32(reader["TestTypeFees"]);
-                    isfound = true;
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            Title = Convert.ToString(reader["TestTypeTitle"]);
+                            Description = Convert.ToString(reader["TestTypeDescription"]);
+                            Fees = Convert.ToSingle(reader["TestTypeFees"]);
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    isfound = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
-                return false;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                {
-                    connection.Close();
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                    isFound = false;
                 }
             }
-            return isfound;
+            return isFound;
         }
-
     }
 }
