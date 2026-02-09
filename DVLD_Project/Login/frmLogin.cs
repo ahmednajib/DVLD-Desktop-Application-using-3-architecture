@@ -24,7 +24,7 @@ namespace DVLD_Project.Login
             if (!this.ValidateChildren())
             {
                 //Here we dont continue becuase the form is not valid
-                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro",
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the error",
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
