@@ -29,39 +29,23 @@
         private void InitializeComponent()
         {
             this.ctrlDrivingLicenseApplicationInfo1 = new DVLD_Project.Applications.localdrivinglicense.ctrlDrivingLicenseApplicationInfo();
-            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ctrlDrivingLicenseApplicationInfo1
             // 
+            this.ctrlDrivingLicenseApplicationInfo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.ctrlDrivingLicenseApplicationInfo1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(-1, 0);
             this.ctrlDrivingLicenseApplicationInfo1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ctrlDrivingLicenseApplicationInfo1.Name = "ctrlDrivingLicenseApplicationInfo1";
-            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(1050, 334);
+            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(762, 334);
             this.ctrlDrivingLicenseApplicationInfo1.TabIndex = 0;
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(911, 336);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(133, 37);
-            this.btnClose.TabIndex = 18;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmLDLApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 379);
-            this.Controls.Add(this.btnClose);
+            this.ClientSize = new System.Drawing.Size(763, 344);
             this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -78,6 +62,5 @@
         #endregion
 
         private ctrlDrivingLicenseApplicationInfo ctrlDrivingLicenseApplicationInfo1;
-        private System.Windows.Forms.Button btnClose;
     }
 }

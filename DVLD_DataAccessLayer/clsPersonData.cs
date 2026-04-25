@@ -88,7 +88,8 @@ namespace DVLD_DataAccessLayer
             return isFound;
         }
 
-        public static int AddNewPerson(string nationalNo, string firstName, string secondName, string thirdName, string lastName, DateTime dateOfBirth, int gender, string address, string phone, string email, int nationalityCountryID, string imagePath)
+        public static int AddNewPerson(string nationalNo, string firstName, string secondName, string thirdName, string lastName, 
+                DateTime dateOfBirth, int gender, string address, string phone, string email, int nationalityCountryID, string imagePath)
         {
             int NewPersonID = -1;
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))

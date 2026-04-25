@@ -1,4 +1,5 @@
-﻿namespace DVLD_Project.Licenses.Local_Licenses
+﻿
+namespace DVLD_Project.Licenses.Local_Licenses
 {
     partial class frmIssueLicenseFirstTime
     {
@@ -40,9 +41,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.Notes_32;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 306);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 325);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 178;
             this.pictureBox1.TabStop = false;
@@ -50,71 +51,93 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 303);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.label1.Location = new System.Drawing.Point(43, 329);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 20);
+            this.label1.Size = new System.Drawing.Size(52, 19);
             this.label1.TabIndex = 177;
             this.label1.Text = "Notes:";
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(113, 307);
+            this.txtNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNotes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotes.Location = new System.Drawing.Point(102, 325);
             this.txtNotes.MaxLength = 500;
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(783, 127);
+            this.txtNotes.Size = new System.Drawing.Size(943, 116);
             this.txtNotes.TabIndex = 176;
             // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.Color.White;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(636, 442);
+            this.btnClose.Location = new System.Drawing.Point(761, 455);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(126, 37);
+            this.btnClose.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnClose.Size = new System.Drawing.Size(136, 44);
             this.btnClose.TabIndex = 180;
             this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // btnIssueLicense
             // 
-            this.btnIssueLicense.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIssueLicense.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIssueLicense.BackColor = System.Drawing.Color.White;
+            this.btnIssueLicense.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.btnIssueLicense.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
+            this.btnIssueLicense.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnIssueLicense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIssueLicense.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIssueLicense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnIssueLicense.Image = global::DVLD_Project.Properties.Resources.License_Type_32;
             this.btnIssueLicense.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIssueLicense.Location = new System.Drawing.Point(770, 442);
+            this.btnIssueLicense.Location = new System.Drawing.Point(908, 455);
             this.btnIssueLicense.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIssueLicense.Name = "btnIssueLicense";
-            this.btnIssueLicense.Size = new System.Drawing.Size(126, 37);
+            this.btnIssueLicense.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnIssueLicense.Size = new System.Drawing.Size(136, 44);
             this.btnIssueLicense.TabIndex = 179;
             this.btnIssueLicense.Text = "Issue";
-            this.btnIssueLicense.UseVisualStyleBackColor = true;
+            this.btnIssueLicense.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIssueLicense.UseVisualStyleBackColor = false;
             this.btnIssueLicense.Click += new System.EventHandler(this.btnIssueLicense_Click);
             // 
             // ctrlDrivingLicenseApplicationInfo1
             // 
-            this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(3, 2);
+            this.ctrlDrivingLicenseApplicationInfo1.BackColor = System.Drawing.Color.White;
+            this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(1, 12);
             this.ctrlDrivingLicenseApplicationInfo1.Name = "ctrlDrivingLicenseApplicationInfo1";
-            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(900, 296);
+            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(1044, 296);
             this.ctrlDrivingLicenseApplicationInfo1.TabIndex = 181;
+            this.ctrlDrivingLicenseApplicationInfo1.Load += new System.EventHandler(this.ctrlDrivingLicenseApplicationInfo1_Load);
             // 
             // frmIssueLicenseFirstTime
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 485);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.CancelButton = this.btnClose;
+            this.ClientSize = new System.Drawing.Size(1053, 515);
             this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnIssueLicense);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNotes);
+            this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmIssueLicenseFirstTime";
             this.ShowIcon = false;

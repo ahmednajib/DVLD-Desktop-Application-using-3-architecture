@@ -1,4 +1,5 @@
-﻿namespace DVLD_Project.Licenses
+﻿
+namespace DVLD_Project.Licenses
 {
     partial class frmShowLicenseInfo
     {
@@ -28,21 +29,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ctrlLicenseInfoCard1 = new DVLD_Project.Licenses.ctrlLicenseInfoCard();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbTestTypeImage = new System.Windows.Forms.PictureBox();
-            this.ctrlLicenseInfoCard1 = new DVLD_Project.Licenses.ctrlLicenseInfoCard();
-            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestTypeImage)).BeginInit();
             this.SuspendLayout();
             // 
+            // ctrlLicenseInfoCard1
+            // 
+            this.ctrlLicenseInfoCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.ctrlLicenseInfoCard1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ctrlLicenseInfoCard1.Location = new System.Drawing.Point(10, 140);
+            this.ctrlLicenseInfoCard1.Name = "ctrlLicenseInfoCard1";
+            this.ctrlLicenseInfoCard1.Size = new System.Drawing.Size(781, 347);
+            this.ctrlLicenseInfoCard1.TabIndex = 141;
+            // 
             // lblTitle
             // 
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(171, 112);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblTitle.Location = new System.Drawing.Point(75, 94);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(441, 39);
-            this.lblTitle.TabIndex = 137;
+            this.lblTitle.Size = new System.Drawing.Size(650, 47);
+            this.lblTitle.TabIndex = 143;
             this.lblTitle.Text = "Driver License Info";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -51,48 +60,26 @@
             this.pbTestTypeImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbTestTypeImage.Image = global::DVLD_Project.Properties.Resources.LicenseView_400;
             this.pbTestTypeImage.InitialImage = null;
-            this.pbTestTypeImage.Location = new System.Drawing.Point(330, 2);
+            this.pbTestTypeImage.Location = new System.Drawing.Point(319, 7);
             this.pbTestTypeImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbTestTypeImage.Name = "pbTestTypeImage";
-            this.pbTestTypeImage.Size = new System.Drawing.Size(113, 104);
+            this.pbTestTypeImage.Size = new System.Drawing.Size(160, 82);
             this.pbTestTypeImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbTestTypeImage.TabIndex = 136;
+            this.pbTestTypeImage.TabIndex = 142;
             this.pbTestTypeImage.TabStop = false;
             // 
-            // ctrlLicenseInfoCard1
+            // frmShowLicenseInfo
             // 
-            this.ctrlLicenseInfoCard1.Location = new System.Drawing.Point(3, 150);
-            this.ctrlLicenseInfoCard1.Name = "ctrlLicenseInfoCard1";
-            this.ctrlLicenseInfoCard1.Size = new System.Drawing.Size(850, 315);
-            this.ctrlLicenseInfoCard1.TabIndex = 138;
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(711, 464);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(135, 37);
-            this.btnClose.TabIndex = 139;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // ShowLicenseInfo
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 506);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.ctrlLicenseInfoCard1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.ClientSize = new System.Drawing.Size(795, 494);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbTestTypeImage);
+            this.Controls.Add(this.ctrlLicenseInfoCard1);
+            this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "ShowLicenseInfo";
+            this.Name = "frmShowLicenseInfo";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Driver License Info";
@@ -104,9 +91,8 @@
 
         #endregion
 
+        private ctrlLicenseInfoCard ctrlLicenseInfoCard1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pbTestTypeImage;
-        private ctrlLicenseInfoCard ctrlLicenseInfoCard1;
-        private System.Windows.Forms.Button btnClose;
     }
 }

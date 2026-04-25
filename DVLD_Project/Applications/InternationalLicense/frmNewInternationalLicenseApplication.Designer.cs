@@ -74,9 +74,9 @@
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(59, 1);
+            this.lblTitle.Location = new System.Drawing.Point(59, -2);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(875, 39);
+            this.lblTitle.Size = new System.Drawing.Size(655, 39);
             this.lblTitle.TabIndex = 124;
             this.lblTitle.Text = "International License Application";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,7 +86,7 @@
             this.llShowLicenseInfo.AutoSize = true;
             this.llShowLicenseInfo.Enabled = false;
             this.llShowLicenseInfo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llShowLicenseInfo.Location = new System.Drawing.Point(212, 620);
+            this.llShowLicenseInfo.Location = new System.Drawing.Point(212, 692);
             this.llShowLicenseInfo.Name = "llShowLicenseInfo";
             this.llShowLicenseInfo.Size = new System.Drawing.Size(156, 19);
             this.llShowLicenseInfo.TabIndex = 182;
@@ -99,7 +99,7 @@
             this.llShowLicenseHistory.AutoSize = true;
             this.llShowLicenseHistory.Enabled = false;
             this.llShowLicenseHistory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llShowLicenseHistory.Location = new System.Drawing.Point(2, 620);
+            this.llShowLicenseHistory.Location = new System.Drawing.Point(2, 692);
             this.llShowLicenseHistory.Name = "llShowLicenseHistory";
             this.llShowLicenseHistory.Size = new System.Drawing.Size(189, 19);
             this.llShowLicenseHistory.TabIndex = 181;
@@ -129,7 +129,7 @@
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(721, 619);
+            this.btnClose.Location = new System.Drawing.Point(654, 683);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(126, 37);
@@ -164,9 +164,9 @@
             this.gpApplicationInfo.Controls.Add(this.label5);
             this.gpApplicationInfo.Controls.Add(this.lblApplicationID);
             this.gpApplicationInfo.Controls.Add(this.label4);
-            this.gpApplicationInfo.Location = new System.Drawing.Point(2, 427);
+            this.gpApplicationInfo.Location = new System.Drawing.Point(3, 493);
             this.gpApplicationInfo.Name = "gpApplicationInfo";
-            this.gpApplicationInfo.Size = new System.Drawing.Size(981, 184);
+            this.gpApplicationInfo.Size = new System.Drawing.Size(780, 184);
             this.gpApplicationInfo.TabIndex = 178;
             this.gpApplicationInfo.TabStop = false;
             this.gpApplicationInfo.Text = "Application Info";
@@ -174,7 +174,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::DVLD_Project.Properties.Resources.LocalDriving_License;
-            this.pictureBox8.Location = new System.Drawing.Point(688, 72);
+            this.pictureBox8.Location = new System.Drawing.Point(614, 72);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(31, 26);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -185,7 +185,7 @@
             // 
             this.lblLocalLicenseID.AutoSize = true;
             this.lblLocalLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalLicenseID.Location = new System.Drawing.Point(726, 72);
+            this.lblLocalLicenseID.Location = new System.Drawing.Point(652, 72);
             this.lblLocalLicenseID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocalLicenseID.Name = "lblLocalLicenseID";
             this.lblLocalLicenseID.Size = new System.Drawing.Size(49, 20);
@@ -196,7 +196,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(517, 72);
+            this.label12.Location = new System.Drawing.Point(443, 72);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(148, 20);
@@ -206,7 +206,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DVLD_Project.Properties.Resources.International_32;
-            this.pictureBox7.Location = new System.Drawing.Point(688, 40);
+            this.pictureBox7.Location = new System.Drawing.Point(614, 40);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(31, 26);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +217,7 @@
             // 
             this.lblInternationalLicenseID.AutoSize = true;
             this.lblInternationalLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInternationalLicenseID.Location = new System.Drawing.Point(726, 40);
+            this.lblInternationalLicenseID.Location = new System.Drawing.Point(652, 40);
             this.lblInternationalLicenseID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInternationalLicenseID.Name = "lblInternationalLicenseID";
             this.lblInternationalLicenseID.Size = new System.Drawing.Size(49, 20);
@@ -228,7 +228,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(517, 40);
+            this.label10.Location = new System.Drawing.Point(443, 40);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 20);
@@ -239,7 +239,7 @@
             // 
             this.lblExpirationDate.AutoSize = true;
             this.lblExpirationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpirationDate.Location = new System.Drawing.Point(726, 104);
+            this.lblExpirationDate.Location = new System.Drawing.Point(652, 104);
             this.lblExpirationDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpirationDate.Name = "lblExpirationDate";
             this.lblExpirationDate.Size = new System.Drawing.Size(109, 20);
@@ -249,7 +249,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::DVLD_Project.Properties.Resources.Calendar_32;
-            this.pictureBox6.Location = new System.Drawing.Point(688, 104);
+            this.pictureBox6.Location = new System.Drawing.Point(614, 104);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(31, 26);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -260,7 +260,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(517, 104);
+            this.label8.Location = new System.Drawing.Point(443, 104);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(138, 20);
@@ -312,7 +312,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.User_32__2;
-            this.pictureBox1.Location = new System.Drawing.Point(688, 136);
+            this.pictureBox1.Location = new System.Drawing.Point(614, 136);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -323,7 +323,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(517, 136);
+            this.label1.Location = new System.Drawing.Point(443, 136);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 20);
@@ -334,7 +334,7 @@
             // 
             this.lblCreatedByUser.AutoSize = true;
             this.lblCreatedByUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreatedByUser.Location = new System.Drawing.Point(726, 136);
+            this.lblCreatedByUser.Location = new System.Drawing.Point(652, 136);
             this.lblCreatedByUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCreatedByUser.Name = "lblCreatedByUser";
             this.lblCreatedByUser.Size = new System.Drawing.Size(59, 20);
@@ -429,11 +429,13 @@
             // 
             // ctrlLicenseInfoWithFilter1
             // 
+            this.ctrlLicenseInfoWithFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ctrlLicenseInfoWithFilter1.FilterEnabled = true;
-            this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(2, 40);
+            this.ctrlLicenseInfoWithFilter1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(2, 38);
             this.ctrlLicenseInfoWithFilter1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlLicenseInfoWithFilter1.Name = "ctrlLicenseInfoWithFilter1";
-            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(989, 382);
+            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(791, 452);
             this.ctrlLicenseInfoWithFilter1.TabIndex = 0;
             this.ctrlLicenseInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlLicenseInfoWithFilter1_OnLicenseSelected);
             // 
@@ -442,7 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(995, 664);
+            this.ClientSize = new System.Drawing.Size(792, 726);
             this.Controls.Add(this.llShowLicenseInfo);
             this.Controls.Add(this.llShowLicenseHistory);
             this.Controls.Add(this.btnIssueLicense);
