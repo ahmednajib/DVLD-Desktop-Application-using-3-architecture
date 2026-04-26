@@ -289,7 +289,7 @@ namespace DVLD_Project
 
         private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace( ((TextBox)sender).Text) )
+            if (string.IsNullOrWhiteSpace(((Control)sender).Text))
             {
                 e.Cancel = true;
                 errorProvider1.SetError((Control)sender, "This field cannot be empty!");
@@ -357,6 +357,11 @@ namespace DVLD_Project
             {
                 e.Handled = true; // Prevent the character from being entered into the control
             }
+        }
+
+        private void groupBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

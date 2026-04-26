@@ -49,6 +49,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Guna.UI2">
+      <HintPath>Lib\Guna.UI2.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Applications\Application Types\frmListApplicationTypes.cs">
@@ -129,6 +132,12 @@
     <Compile Include="Applications\ReplacementforLostOrDamagedLicense\frmReplacementDamagedOrLostLicense.Designer.cs">
       <DependentUpon>frmReplacementDamagedOrLostLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ctrlDashboardHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlDashboardHome.Designer.cs">
+      <DependentUpon>ctrlDashboardHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drivers\frmListDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +148,7 @@
     <Compile Include="Global Classes\clsGlobal.cs" />
     <Compile Include="Global Classes\clsHashing.cs" />
     <Compile Include="Global Classes\clsLogger.cs" />
+    <Compile Include="Global Classes\clsModernTheme.cs" />
     <Compile Include="Global Classes\clsValidatoin.cs" />
     <Compile Include="Global Classes\util.cs" />
     <Compile Include="Licenses\Controls\ctrlDriverLicenses.cs">

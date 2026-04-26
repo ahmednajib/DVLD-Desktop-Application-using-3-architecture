@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.lblUserMessage = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.txtNotes = new System.Windows.Forms.TextBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.txtNotes = new Guna.UI2.WinForms.Guna2TextBox();
             this.rbFail = new System.Windows.Forms.RadioButton();
             this.rbPass = new System.Windows.Forms.RadioButton();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -46,12 +46,12 @@
             // lblUserMessage
             // 
             this.lblUserMessage.AutoSize = true;
-            this.lblUserMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserMessage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblUserMessage.Location = new System.Drawing.Point(296, 522);
+            this.lblUserMessage.Location = new System.Drawing.Point(261, 548);
             this.lblUserMessage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblUserMessage.Name = "lblUserMessage";
-            this.lblUserMessage.Size = new System.Drawing.Size(255, 20);
+            this.lblUserMessage.Size = new System.Drawing.Size(239, 21);
             this.lblUserMessage.TabIndex = 209;
             this.lblUserMessage.Text = "You cannot change the results";
             this.lblUserMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,48 +59,67 @@
             // 
             // btnClose
             // 
+            this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.btnClose.BorderRadius = 6;
+            this.btnClose.BorderThickness = 1;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.FillColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(302, 652);
+            this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnClose.Location = new System.Drawing.Point(302, 637);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
+            this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.btnClose.Size = new System.Drawing.Size(126, 37);
             this.btnClose.TabIndex = 208;
             this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
+            this.btnSave.BorderRadius = 6;
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnSave.Image = global::DVLD_Project.Properties.Resources.Save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(438, 653);
+            this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSave.Location = new System.Drawing.Point(438, 638);
             this.btnSave.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnSave.Name = "btnSave";
+            this.btnSave.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.btnSave.Size = new System.Drawing.Size(137, 36);
             this.btnSave.TabIndex = 207;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(167, 554);
+            this.txtNotes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.txtNotes.BorderRadius = 6;
+            this.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNotes.DefaultText = "";
+            this.txtNotes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.txtNotes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtNotes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(165)))), ((int)(((byte)(250)))));
+            this.txtNotes.Location = new System.Drawing.Point(132, 579);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(408, 91);
+            this.txtNotes.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.txtNotes.PlaceholderText = "";
+            this.txtNotes.SelectedText = "";
+            this.txtNotes.Size = new System.Drawing.Size(408, 47);
             this.txtNotes.TabIndex = 206;
             // 
             // rbFail
             // 
             this.rbFail.AutoSize = true;
-            this.rbFail.Location = new System.Drawing.Point(235, 520);
+            this.rbFail.Location = new System.Drawing.Point(207, 550);
             this.rbFail.Name = "rbFail";
             this.rbFail.Size = new System.Drawing.Size(41, 17);
             this.rbFail.TabIndex = 205;
@@ -111,7 +130,7 @@
             // 
             this.rbPass.AutoSize = true;
             this.rbPass.Checked = true;
-            this.rbPass.Location = new System.Drawing.Point(167, 520);
+            this.rbPass.Location = new System.Drawing.Point(139, 550);
             this.rbPass.Name = "rbPass";
             this.rbPass.Size = new System.Drawing.Size(47, 17);
             this.rbPass.TabIndex = 204;
@@ -122,7 +141,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DVLD_Project.Properties.Resources.Notes_32;
-            this.pictureBox7.Location = new System.Drawing.Point(119, 554);
+            this.pictureBox7.Location = new System.Drawing.Point(91, 587);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(31, 26);
@@ -133,18 +152,18 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(53, 554);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 587);
             this.label10.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 20);
+            this.label10.Size = new System.Drawing.Size(59, 21);
             this.label10.TabIndex = 202;
             this.label10.Text = "Notes:";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DVLD_Project.Properties.Resources.Number_32;
-            this.pictureBox4.Location = new System.Drawing.Point(119, 518);
+            this.pictureBox4.Location = new System.Drawing.Point(91, 548);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 26);
@@ -155,11 +174,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(48, 518);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(20, 548);
             this.label8.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 20);
+            this.label8.Size = new System.Drawing.Size(61, 21);
             this.label8.TabIndex = 200;
             this.label8.Text = "Result:";
             // 
@@ -167,7 +186,7 @@
             // 
             this.ctrlScheduledTest1.Location = new System.Drawing.Point(2, -3);
             this.ctrlScheduledTest1.Name = "ctrlScheduledTest1";
-            this.ctrlScheduledTest1.Size = new System.Drawing.Size(579, 518);
+            this.ctrlScheduledTest1.Size = new System.Drawing.Size(579, 547);
             this.ctrlScheduledTest1.TabIndex = 0;
             // 
             // frmTakeTest
@@ -175,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(579, 693);
+            this.ClientSize = new System.Drawing.Size(579, 678);
             this.Controls.Add(this.lblUserMessage);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
@@ -204,9 +223,9 @@
 
         private Controls.ctrlScheduledTest ctrlScheduledTest1;
         private System.Windows.Forms.Label lblUserMessage;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtNotes;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2TextBox txtNotes;
         private System.Windows.Forms.RadioButton rbFail;
         private System.Windows.Forms.RadioButton rbPass;
         private System.Windows.Forms.PictureBox pictureBox7;

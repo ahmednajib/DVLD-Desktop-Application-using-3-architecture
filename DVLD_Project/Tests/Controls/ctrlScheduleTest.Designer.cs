@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbTestType = new System.Windows.Forms.GroupBox();
-            this.gbRetakeTestInfo = new System.Windows.Forms.GroupBox();
+            this.gbTestType = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.gbRetakeTestInfo = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblTotalFees = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lblRetakeAppFees = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblRetakeTestAppID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pbTestTypeImage = new System.Windows.Forms.PictureBox();
             this.lblUserMessage = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblDrivingClass = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblLocalDrivingLicenseAppID = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.lblFullName = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTrial = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFees = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpTestDate = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pbTestTypeImage = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.dtpTestDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.gbTestType.SuspendLayout();
             this.gbRetakeTestInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -77,6 +77,8 @@
             // 
             // gbTestType
             // 
+            this.gbTestType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.gbTestType.BorderRadius = 8;
             this.gbTestType.Controls.Add(this.gbRetakeTestInfo);
             this.gbTestType.Controls.Add(this.pbTestTypeImage);
             this.gbTestType.Controls.Add(this.lblUserMessage);
@@ -100,7 +102,10 @@
             this.gbTestType.Controls.Add(this.label1);
             this.gbTestType.Controls.Add(this.pictureBox8);
             this.gbTestType.Controls.Add(this.lblTitle);
-            this.gbTestType.Location = new System.Drawing.Point(10, 5);
+            this.gbTestType.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.gbTestType.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.gbTestType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.gbTestType.Location = new System.Drawing.Point(3, 5);
             this.gbTestType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbTestType.Name = "gbTestType";
             this.gbTestType.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -111,6 +116,8 @@
             // 
             // gbRetakeTestInfo
             // 
+            this.gbRetakeTestInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.gbRetakeTestInfo.BorderRadius = 8;
             this.gbRetakeTestInfo.Controls.Add(this.lblTotalFees);
             this.gbRetakeTestInfo.Controls.Add(this.label9);
             this.gbRetakeTestInfo.Controls.Add(this.pictureBox9);
@@ -120,7 +127,10 @@
             this.gbRetakeTestInfo.Controls.Add(this.pictureBox5);
             this.gbRetakeTestInfo.Controls.Add(this.lblRetakeTestAppID);
             this.gbRetakeTestInfo.Controls.Add(this.label4);
-            this.gbRetakeTestInfo.Location = new System.Drawing.Point(7, 480);
+            this.gbRetakeTestInfo.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.gbRetakeTestInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.gbRetakeTestInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.gbRetakeTestInfo.Location = new System.Drawing.Point(10, 483);
             this.gbRetakeTestInfo.Name = "gbRetakeTestInfo";
             this.gbRetakeTestInfo.Size = new System.Drawing.Size(505, 115);
             this.gbRetakeTestInfo.TabIndex = 189;
@@ -130,231 +140,29 @@
             // lblTotalFees
             // 
             this.lblTotalFees.AutoSize = true;
-            this.lblTotalFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFees.Location = new System.Drawing.Point(446, 40);
+            this.lblTotalFees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalFees.Location = new System.Drawing.Point(446, 46);
             this.lblTotalFees.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTotalFees.Name = "lblTotalFees";
-            this.lblTotalFees.Size = new System.Drawing.Size(49, 20);
+            this.lblTotalFees.Size = new System.Drawing.Size(49, 21);
             this.lblTotalFees.TabIndex = 206;
             this.lblTotalFees.Text = "[$$$]";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(287, 40);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(287, 46);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 20);
+            this.label9.Size = new System.Drawing.Size(89, 21);
             this.label9.TabIndex = 204;
             this.label9.Text = "Total Fees:";
-            // 
-            // lblRetakeAppFees
-            // 
-            this.lblRetakeAppFees.AutoSize = true;
-            this.lblRetakeAppFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRetakeAppFees.Location = new System.Drawing.Point(180, 40);
-            this.lblRetakeAppFees.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblRetakeAppFees.Name = "lblRetakeAppFees";
-            this.lblRetakeAppFees.Size = new System.Drawing.Size(49, 20);
-            this.lblRetakeAppFees.TabIndex = 203;
-            this.lblRetakeAppFees.Text = "[$$$]";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 40);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 20);
-            this.label7.TabIndex = 201;
-            this.label7.Text = "R.App.Fees:";
-            // 
-            // lblRetakeTestAppID
-            // 
-            this.lblRetakeTestAppID.AutoSize = true;
-            this.lblRetakeTestAppID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRetakeTestAppID.Location = new System.Drawing.Point(180, 76);
-            this.lblRetakeTestAppID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblRetakeTestAppID.Name = "lblRetakeTestAppID";
-            this.lblRetakeTestAppID.Size = new System.Drawing.Size(39, 20);
-            this.lblRetakeTestAppID.TabIndex = 199;
-            this.lblRetakeTestAppID.Text = "[??]";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 76);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 20);
-            this.label4.TabIndex = 198;
-            this.label4.Text = "R.Test.App.ID";
-            // 
-            // lblUserMessage
-            // 
-            this.lblUserMessage.AutoSize = true;
-            this.lblUserMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblUserMessage.Location = new System.Drawing.Point(53, 236);
-            this.lblUserMessage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblUserMessage.Name = "lblUserMessage";
-            this.lblUserMessage.Size = new System.Drawing.Size(432, 20);
-            this.lblUserMessage.TabIndex = 188;
-            this.lblUserMessage.Text = "Cannot Sechule, Vision Test Should be Passed First.";
-            this.lblUserMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDrivingClass
-            // 
-            this.lblDrivingClass.AutoSize = true;
-            this.lblDrivingClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDrivingClass.Location = new System.Drawing.Point(175, 302);
-            this.lblDrivingClass.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblDrivingClass.Name = "lblDrivingClass";
-            this.lblDrivingClass.Size = new System.Drawing.Size(89, 20);
-            this.lblDrivingClass.TabIndex = 171;
-            this.lblDrivingClass.Text = "[???????]";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(44, 302);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 20);
-            this.label10.TabIndex = 170;
-            this.label10.Text = "D. Class:";
-            // 
-            // lblLocalDrivingLicenseAppID
-            // 
-            this.lblLocalDrivingLicenseAppID.AutoSize = true;
-            this.lblLocalDrivingLicenseAppID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalDrivingLicenseAppID.Location = new System.Drawing.Point(175, 266);
-            this.lblLocalDrivingLicenseAppID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblLocalDrivingLicenseAppID.Name = "lblLocalDrivingLicenseAppID";
-            this.lblLocalDrivingLicenseAppID.Size = new System.Drawing.Size(39, 20);
-            this.lblLocalDrivingLicenseAppID.TabIndex = 168;
-            this.lblLocalDrivingLicenseAppID.Text = "[??]";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 266);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 20);
-            this.label8.TabIndex = 167;
-            this.label8.Text = "D.L.App.ID:";
-            // 
-            // lblFullName
-            // 
-            this.lblFullName.AutoSize = true;
-            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(175, 338);
-            this.lblFullName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(89, 20);
-            this.lblFullName.TabIndex = 165;
-            this.lblFullName.Text = "[???????]";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(65, 338);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
-            this.label6.TabIndex = 163;
-            this.label6.Text = "Name:";
-            // 
-            // lblTrial
-            // 
-            this.lblTrial.AutoSize = true;
-            this.lblTrial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrial.Location = new System.Drawing.Point(175, 374);
-            this.lblTrial.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblTrial.Name = "lblTrial";
-            this.lblTrial.Size = new System.Drawing.Size(39, 20);
-            this.lblTrial.TabIndex = 162;
-            this.lblTrial.Text = "[??]";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(77, 374);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 20);
-            this.label5.TabIndex = 160;
-            this.label5.Text = "Trial:";
-            // 
-            // lblFees
-            // 
-            this.lblFees.AutoSize = true;
-            this.lblFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFees.Location = new System.Drawing.Point(175, 446);
-            this.lblFees.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblFees.Name = "lblFees";
-            this.lblFees.Size = new System.Drawing.Size(49, 20);
-            this.lblFees.TabIndex = 159;
-            this.lblFees.Text = "[$$$]";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 446);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
-            this.label2.TabIndex = 157;
-            this.label2.Text = "Fees:";
-            // 
-            // dtpTestDate
-            // 
-            this.dtpTestDate.CustomFormat = "dd/M/yyyy";
-            this.dtpTestDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTestDate.Location = new System.Drawing.Point(175, 410);
-            this.dtpTestDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtpTestDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpTestDate.Name = "dtpTestDate";
-            this.dtpTestDate.Size = new System.Drawing.Size(163, 20);
-            this.dtpTestDate.TabIndex = 155;
-            this.dtpTestDate.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 410);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
-            this.label1.TabIndex = 153;
-            this.label1.Text = "Date:";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(99, 191);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(354, 53);
-            this.lblTitle.TabIndex = 153;
-            this.lblTitle.Text = "Schedule Test";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::DVLD_Project.Properties.Resources.money_32;
-            this.pictureBox9.Location = new System.Drawing.Point(406, 40);
+            this.pictureBox9.Location = new System.Drawing.Point(406, 46);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(31, 26);
@@ -362,10 +170,32 @@
             this.pictureBox9.TabIndex = 205;
             this.pictureBox9.TabStop = false;
             // 
+            // lblRetakeAppFees
+            // 
+            this.lblRetakeAppFees.AutoSize = true;
+            this.lblRetakeAppFees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetakeAppFees.Location = new System.Drawing.Point(180, 46);
+            this.lblRetakeAppFees.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblRetakeAppFees.Name = "lblRetakeAppFees";
+            this.lblRetakeAppFees.Size = new System.Drawing.Size(49, 21);
+            this.lblRetakeAppFees.TabIndex = 203;
+            this.lblRetakeAppFees.Text = "[$$$]";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(21, 46);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 21);
+            this.label7.TabIndex = 201;
+            this.label7.Text = "R.App.Fees:";
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::DVLD_Project.Properties.Resources.money_32;
-            this.pictureBox6.Location = new System.Drawing.Point(140, 40);
+            this.pictureBox6.Location = new System.Drawing.Point(140, 46);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(31, 26);
@@ -376,25 +206,60 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::DVLD_Project.Properties.Resources.Number_32;
-            this.pictureBox5.Location = new System.Drawing.Point(140, 76);
+            this.pictureBox5.Location = new System.Drawing.Point(140, 82);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(31, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 200;
             this.pictureBox5.TabStop = false;
             // 
+            // lblRetakeTestAppID
+            // 
+            this.lblRetakeTestAppID.AutoSize = true;
+            this.lblRetakeTestAppID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetakeTestAppID.Location = new System.Drawing.Point(180, 82);
+            this.lblRetakeTestAppID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblRetakeTestAppID.Name = "lblRetakeTestAppID";
+            this.lblRetakeTestAppID.Size = new System.Drawing.Size(36, 21);
+            this.lblRetakeTestAppID.TabIndex = 199;
+            this.lblRetakeTestAppID.Text = "[??]";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 82);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 21);
+            this.label4.TabIndex = 198;
+            this.label4.Text = "R.Test.App.ID";
+            // 
             // pbTestTypeImage
             // 
             this.pbTestTypeImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbTestTypeImage.Image = global::DVLD_Project.Properties.Resources.driving_test_512;
             this.pbTestTypeImage.InitialImage = null;
-            this.pbTestTypeImage.Location = new System.Drawing.Point(166, 15);
+            this.pbTestTypeImage.Location = new System.Drawing.Point(179, 42);
             this.pbTestTypeImage.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.pbTestTypeImage.Name = "pbTestTypeImage";
-            this.pbTestTypeImage.Size = new System.Drawing.Size(225, 177);
+            this.pbTestTypeImage.Size = new System.Drawing.Size(185, 133);
             this.pbTestTypeImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTestTypeImage.TabIndex = 152;
             this.pbTestTypeImage.TabStop = false;
+            // 
+            // lblUserMessage
+            // 
+            this.lblUserMessage.AutoSize = true;
+            this.lblUserMessage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblUserMessage.Location = new System.Drawing.Point(53, 236);
+            this.lblUserMessage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblUserMessage.Name = "lblUserMessage";
+            this.lblUserMessage.Size = new System.Drawing.Size(396, 21);
+            this.lblUserMessage.TabIndex = 188;
+            this.lblUserMessage.Text = "Cannot Sechule, Vision Test Should be Passed First.";
+            this.lblUserMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox7
             // 
@@ -406,6 +271,28 @@
             this.pictureBox7.TabIndex = 187;
             this.pictureBox7.TabStop = false;
             // 
+            // lblDrivingClass
+            // 
+            this.lblDrivingClass.AutoSize = true;
+            this.lblDrivingClass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDrivingClass.Location = new System.Drawing.Point(175, 302);
+            this.lblDrivingClass.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblDrivingClass.Name = "lblDrivingClass";
+            this.lblDrivingClass.Size = new System.Drawing.Size(71, 21);
+            this.lblDrivingClass.TabIndex = 171;
+            this.lblDrivingClass.Text = "[???????]";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(44, 302);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 21);
+            this.label10.TabIndex = 170;
+            this.label10.Text = "D. Class:";
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DVLD_Project.Properties.Resources.Number_32;
@@ -416,21 +303,57 @@
             this.pictureBox4.TabIndex = 169;
             this.pictureBox4.TabStop = false;
             // 
+            // lblLocalDrivingLicenseAppID
+            // 
+            this.lblLocalDrivingLicenseAppID.AutoSize = true;
+            this.lblLocalDrivingLicenseAppID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDrivingLicenseAppID.Location = new System.Drawing.Point(175, 266);
+            this.lblLocalDrivingLicenseAppID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblLocalDrivingLicenseAppID.Name = "lblLocalDrivingLicenseAppID";
+            this.lblLocalDrivingLicenseAppID.Size = new System.Drawing.Size(36, 21);
+            this.lblLocalDrivingLicenseAppID.TabIndex = 168;
+            this.lblLocalDrivingLicenseAppID.Text = "[??]";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 266);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 21);
+            this.label8.TabIndex = 167;
+            this.label8.Text = "D.L.App.ID:";
+            // 
             // btnSave
             // 
+            this.btnSave.BorderRadius = 6;
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnSave.Image = global::DVLD_Project.Properties.Resources.Save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSave.Location = new System.Drawing.Point(375, 602);
             this.btnSave.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnSave.Name = "btnSave";
+            this.btnSave.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.btnSave.Size = new System.Drawing.Size(137, 36);
             this.btnSave.TabIndex = 166;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(175, 338);
+            this.lblFullName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(71, 21);
+            this.lblFullName.TabIndex = 165;
+            this.lblFullName.Text = "[???????]";
             // 
             // pictureBox2
             // 
@@ -443,6 +366,39 @@
             this.pictureBox2.TabIndex = 164;
             this.pictureBox2.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(65, 338);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 21);
+            this.label6.TabIndex = 163;
+            this.label6.Text = "Name:";
+            // 
+            // lblTrial
+            // 
+            this.lblTrial.AutoSize = true;
+            this.lblTrial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrial.Location = new System.Drawing.Point(175, 374);
+            this.lblTrial.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTrial.Name = "lblTrial";
+            this.lblTrial.Size = new System.Drawing.Size(36, 21);
+            this.lblTrial.TabIndex = 162;
+            this.lblTrial.Text = "[??]";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(77, 374);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 21);
+            this.label5.TabIndex = 160;
+            this.label5.Text = "Trial:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.Count_32;
@@ -453,6 +409,28 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 161;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblFees
+            // 
+            this.lblFees.AutoSize = true;
+            this.lblFees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFees.Location = new System.Drawing.Point(175, 446);
+            this.lblFees.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFees.Name = "lblFees";
+            this.lblFees.Size = new System.Drawing.Size(49, 21);
+            this.lblFees.TabIndex = 159;
+            this.lblFees.Text = "[$$$]";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(71, 446);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 21);
+            this.label2.TabIndex = 157;
+            this.label2.Text = "Fees:";
             // 
             // pictureBox3
             // 
@@ -465,6 +443,35 @@
             this.pictureBox3.TabIndex = 158;
             this.pictureBox3.TabStop = false;
             // 
+            // dtpTestDate
+            // 
+            this.dtpTestDate.BorderRadius = 6;
+            this.dtpTestDate.Checked = true;
+            this.dtpTestDate.CustomFormat = "dd/M/yyyy";
+            this.dtpTestDate.FillColor = System.Drawing.Color.White;
+            this.dtpTestDate.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dtpTestDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dtpTestDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTestDate.Location = new System.Drawing.Point(175, 410);
+            this.dtpTestDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpTestDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTestDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpTestDate.Name = "dtpTestDate";
+            this.dtpTestDate.Size = new System.Drawing.Size(163, 20);
+            this.dtpTestDate.TabIndex = 155;
+            this.dtpTestDate.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(72, 410);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 21);
+            this.label1.TabIndex = 153;
+            this.label1.Text = "Date:";
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::DVLD_Project.Properties.Resources.Calendar_32;
@@ -476,13 +483,25 @@
             this.pictureBox8.TabIndex = 154;
             this.pictureBox8.TabStop = false;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTitle.Location = new System.Drawing.Point(99, 179);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(354, 53);
+            this.lblTitle.TabIndex = 153;
+            this.lblTitle.Text = "Schedule Test";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ctrlScheduleTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbTestType);
             this.Name = "ctrlScheduleTest";
-            this.Size = new System.Drawing.Size(543, 650);
+            this.Size = new System.Drawing.Size(528, 650);
             this.gbTestType.ResumeLayout(false);
             this.gbTestType.PerformLayout();
             this.gbRetakeTestInfo.ResumeLayout(false);
@@ -503,8 +522,8 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbTestType;
-        private System.Windows.Forms.GroupBox gbRetakeTestInfo;
+        private Guna.UI2.WinForms.Guna2GroupBox gbTestType;
+        private Guna.UI2.WinForms.Guna2GroupBox gbRetakeTestInfo;
         private System.Windows.Forms.Label lblTotalFees;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -522,7 +541,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblLocalDrivingLicenseAppID;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnSave;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
@@ -532,9 +551,10 @@
         private System.Windows.Forms.Label lblFees;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.DateTimePicker dtpTestDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTestDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lblTitle;
     }
 }
+

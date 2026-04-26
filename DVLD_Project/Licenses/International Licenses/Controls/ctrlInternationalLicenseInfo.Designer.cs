@@ -29,7 +29,7 @@ namespace DVLD_Project.Licenses.International_Licenses.Controls
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblApplicationID = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -121,6 +121,12 @@ namespace DVLD_Project.Licenses.International_Licenses.Controls
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(10);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.groupBox1.BorderRadius = 8;
+            this.groupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.groupBox1.FillColor = System.Drawing.Color.White;
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.groupBox1.Padding = new System.Windows.Forms.Padding(14);
             this.groupBox1.Size = new System.Drawing.Size(863, 315);
             this.groupBox1.TabIndex = 21;
@@ -556,7 +562,7 @@ namespace DVLD_Project.Licenses.International_Licenses.Controls
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label lblApplicationID;
         private System.Windows.Forms.Label label9;
@@ -593,3 +599,4 @@ namespace DVLD_Project.Licenses.International_Licenses.Controls
         private System.Windows.Forms.PictureBox pbPersonImage;
     }
 }
+

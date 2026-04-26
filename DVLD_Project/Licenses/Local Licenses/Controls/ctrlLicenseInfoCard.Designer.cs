@@ -29,7 +29,7 @@ namespace DVLD_Project.Licenses
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbLicenseInfo = new System.Windows.Forms.GroupBox();
+            this.gbLicenseInfo = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblIsDetained = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -91,6 +91,8 @@ namespace DVLD_Project.Licenses
             // gbLicenseInfo
             // 
             this.gbLicenseInfo.BackColor = System.Drawing.Color.White;
+            this.gbLicenseInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.gbLicenseInfo.BorderRadius = 8;
             this.gbLicenseInfo.Controls.Add(this.lblIsDetained);
             this.gbLicenseInfo.Controls.Add(this.pictureBox12);
             this.gbLicenseInfo.Controls.Add(this.label11);
@@ -132,12 +134,13 @@ namespace DVLD_Project.Licenses
             this.gbLicenseInfo.Controls.Add(this.label7);
             this.gbLicenseInfo.Controls.Add(this.pbPersonImage);
             this.gbLicenseInfo.Controls.Add(this.label1);
-            this.gbLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLicenseInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.gbLicenseInfo.Location = new System.Drawing.Point(8, 10);
+            this.gbLicenseInfo.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.gbLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.gbLicenseInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.gbLicenseInfo.Location = new System.Drawing.Point(6, 1);
             this.gbLicenseInfo.Name = "gbLicenseInfo";
             this.gbLicenseInfo.Padding = new System.Windows.Forms.Padding(12);
-            this.gbLicenseInfo.Size = new System.Drawing.Size(767, 332);
+            this.gbLicenseInfo.Size = new System.Drawing.Size(845, 308);
             this.gbLicenseInfo.TabIndex = 1;
             this.gbLicenseInfo.TabStop = false;
             this.gbLicenseInfo.Text = "Driver License Info";
@@ -147,7 +150,7 @@ namespace DVLD_Project.Licenses
             this.lblIsDetained.AutoSize = true;
             this.lblIsDetained.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblIsDetained.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblIsDetained.Location = new System.Drawing.Point(451, 260);
+            this.lblIsDetained.Location = new System.Drawing.Point(497, 260);
             this.lblIsDetained.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblIsDetained.Name = "lblIsDetained";
             this.lblIsDetained.Size = new System.Drawing.Size(43, 19);
@@ -157,7 +160,7 @@ namespace DVLD_Project.Licenses
             // pictureBox12
             // 
             this.pictureBox12.Image = global::DVLD_Project.Properties.Resources.Question_32;
-            this.pictureBox12.Location = new System.Drawing.Point(413, 256);
+            this.pictureBox12.Location = new System.Drawing.Point(459, 256);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(28, 28);
@@ -170,7 +173,7 @@ namespace DVLD_Project.Licenses
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label11.Location = new System.Drawing.Point(297, 260);
+            this.label11.Location = new System.Drawing.Point(343, 260);
             this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 19);
@@ -183,7 +186,7 @@ namespace DVLD_Project.Licenses
             this.lblIssueReason.AutoSize = true;
             this.lblIssueReason.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblIssueReason.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblIssueReason.Location = new System.Drawing.Point(148, 260);
+            this.lblIssueReason.Location = new System.Drawing.Point(148, 221);
             this.lblIssueReason.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblIssueReason.MaximumSize = new System.Drawing.Size(150, 0);
             this.lblIssueReason.Name = "lblIssueReason";
@@ -194,7 +197,7 @@ namespace DVLD_Project.Licenses
             // pictureBox11
             // 
             this.pictureBox11.Image = global::DVLD_Project.Properties.Resources.Notes_32;
-            this.pictureBox11.Location = new System.Drawing.Point(110, 256);
+            this.pictureBox11.Location = new System.Drawing.Point(110, 217);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(28, 28);
@@ -207,7 +210,7 @@ namespace DVLD_Project.Licenses
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label9.Location = new System.Drawing.Point(13, 260);
+            this.label9.Location = new System.Drawing.Point(13, 221);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 19);
@@ -219,7 +222,7 @@ namespace DVLD_Project.Licenses
             this.lblIsActive.AutoSize = true;
             this.lblIsActive.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblIsActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(163)))), ((int)(((byte)(74)))));
-            this.lblIsActive.Location = new System.Drawing.Point(451, 113);
+            this.lblIsActive.Location = new System.Drawing.Point(497, 73);
             this.lblIsActive.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblIsActive.Name = "lblIsActive";
             this.lblIsActive.Size = new System.Drawing.Size(43, 19);
@@ -240,7 +243,7 @@ namespace DVLD_Project.Licenses
             // pictureBox10
             // 
             this.pictureBox10.Image = global::DVLD_Project.Properties.Resources.Question_32;
-            this.pictureBox10.Location = new System.Drawing.Point(413, 109);
+            this.pictureBox10.Location = new System.Drawing.Point(459, 69);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(28, 28);
@@ -263,7 +266,7 @@ namespace DVLD_Project.Licenses
             // pictureBox9
             // 
             this.pictureBox9.Image = global::DVLD_Project.Properties.Resources.License_Type_32;
-            this.pictureBox9.Location = new System.Drawing.Point(110, 38);
+            this.pictureBox9.Location = new System.Drawing.Point(110, 41);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(28, 28);
@@ -276,7 +279,7 @@ namespace DVLD_Project.Licenses
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label8.Location = new System.Drawing.Point(297, 113);
+            this.label8.Location = new System.Drawing.Point(343, 73);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 19);
@@ -300,7 +303,7 @@ namespace DVLD_Project.Licenses
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD_Project.Properties.Resources.Number_32;
-            this.pictureBox2.Location = new System.Drawing.Point(413, 220);
+            this.pictureBox2.Location = new System.Drawing.Point(459, 220);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
@@ -313,7 +316,7 @@ namespace DVLD_Project.Licenses
             this.lblClass.AutoSize = true;
             this.lblClass.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblClass.Location = new System.Drawing.Point(148, 42);
+            this.lblClass.Location = new System.Drawing.Point(148, 45);
             this.lblClass.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(37, 19);
@@ -336,7 +339,7 @@ namespace DVLD_Project.Licenses
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label10.Location = new System.Drawing.Point(13, 42);
+            this.label10.Location = new System.Drawing.Point(13, 45);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 19);
@@ -348,7 +351,7 @@ namespace DVLD_Project.Licenses
             this.lblExpirationDate.AutoSize = true;
             this.lblExpirationDate.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblExpirationDate.Location = new System.Drawing.Point(451, 187);
+            this.lblExpirationDate.Location = new System.Drawing.Point(497, 147);
             this.lblExpirationDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblExpirationDate.Name = "lblExpirationDate";
             this.lblExpirationDate.Size = new System.Drawing.Size(43, 19);
@@ -360,7 +363,7 @@ namespace DVLD_Project.Licenses
             this.lblDriverID.AutoSize = true;
             this.lblDriverID.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblDriverID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblDriverID.Location = new System.Drawing.Point(451, 220);
+            this.lblDriverID.Location = new System.Drawing.Point(497, 220);
             this.lblDriverID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblDriverID.Name = "lblDriverID";
             this.lblDriverID.Size = new System.Drawing.Size(43, 19);
@@ -372,7 +375,7 @@ namespace DVLD_Project.Licenses
             this.lblDateOfBirth.AutoSize = true;
             this.lblDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblDateOfBirth.Location = new System.Drawing.Point(451, 153);
+            this.lblDateOfBirth.Location = new System.Drawing.Point(497, 113);
             this.lblDateOfBirth.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(43, 19);
@@ -397,7 +400,7 @@ namespace DVLD_Project.Licenses
             this.lblNotes.AutoSize = true;
             this.lblNotes.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblNotes.Location = new System.Drawing.Point(148, 297);
+            this.lblNotes.Location = new System.Drawing.Point(148, 258);
             this.lblNotes.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNotes.MaximumSize = new System.Drawing.Size(520, 0);
             this.lblNotes.Name = "lblNotes";
@@ -410,7 +413,7 @@ namespace DVLD_Project.Licenses
             this.lblIssueDate.AutoSize = true;
             this.lblIssueDate.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblIssueDate.Location = new System.Drawing.Point(148, 224);
+            this.lblIssueDate.Location = new System.Drawing.Point(497, 185);
             this.lblIssueDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblIssueDate.Name = "lblIssueDate";
             this.lblIssueDate.Size = new System.Drawing.Size(43, 19);
@@ -432,7 +435,7 @@ namespace DVLD_Project.Licenses
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DVLD_Project.Properties.Resources.Calendar_32;
-            this.pictureBox4.Location = new System.Drawing.Point(413, 149);
+            this.pictureBox4.Location = new System.Drawing.Point(459, 109);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 28);
@@ -490,7 +493,7 @@ namespace DVLD_Project.Licenses
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DVLD_Project.Properties.Resources.Notes_32;
-            this.pictureBox7.Location = new System.Drawing.Point(110, 293);
+            this.pictureBox7.Location = new System.Drawing.Point(110, 254);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(28, 28);
@@ -501,7 +504,7 @@ namespace DVLD_Project.Licenses
             // pictureBox6
             // 
             this.pictureBox6.Image = global::DVLD_Project.Properties.Resources.Calendar_32;
-            this.pictureBox6.Location = new System.Drawing.Point(413, 183);
+            this.pictureBox6.Location = new System.Drawing.Point(459, 143);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 28);
@@ -512,7 +515,7 @@ namespace DVLD_Project.Licenses
             // pictureBox5
             // 
             this.pictureBox5.Image = global::DVLD_Project.Properties.Resources.Calendar_32;
-            this.pictureBox5.Location = new System.Drawing.Point(110, 220);
+            this.pictureBox5.Location = new System.Drawing.Point(459, 181);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(28, 28);
@@ -536,7 +539,7 @@ namespace DVLD_Project.Licenses
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label15.Location = new System.Drawing.Point(297, 187);
+            this.label15.Location = new System.Drawing.Point(343, 147);
             this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(116, 19);
@@ -548,7 +551,7 @@ namespace DVLD_Project.Licenses
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label12.Location = new System.Drawing.Point(13, 297);
+            this.label12.Location = new System.Drawing.Point(13, 258);
             this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 19);
@@ -560,7 +563,7 @@ namespace DVLD_Project.Licenses
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label6.Location = new System.Drawing.Point(13, 224);
+            this.label6.Location = new System.Drawing.Point(343, 185);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 19);
@@ -572,7 +575,7 @@ namespace DVLD_Project.Licenses
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label4.Location = new System.Drawing.Point(297, 223);
+            this.label4.Location = new System.Drawing.Point(343, 223);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 19);
@@ -584,7 +587,7 @@ namespace DVLD_Project.Licenses
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label3.Location = new System.Drawing.Point(297, 153);
+            this.label3.Location = new System.Drawing.Point(343, 113);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 19);
@@ -610,10 +613,10 @@ namespace DVLD_Project.Licenses
             this.pbPersonImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbPersonImage.Image = global::DVLD_Project.Properties.Resources.Male_512;
             this.pbPersonImage.InitialImage = null;
-            this.pbPersonImage.Location = new System.Drawing.Point(600, 101);
+            this.pbPersonImage.Location = new System.Drawing.Point(650, 78);
             this.pbPersonImage.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.pbPersonImage.Name = "pbPersonImage";
-            this.pbPersonImage.Size = new System.Drawing.Size(160, 182);
+            this.pbPersonImage.Size = new System.Drawing.Size(151, 182);
             this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPersonImage.TabIndex = 199;
             this.pbPersonImage.TabStop = false;
@@ -621,10 +624,10 @@ namespace DVLD_Project.Licenses
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 18);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 0;
             // 
             // ctrlLicenseInfoCard
@@ -635,7 +638,7 @@ namespace DVLD_Project.Licenses
             this.Controls.Add(this.gbLicenseInfo);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Name = "ctrlLicenseInfoCard";
-            this.Size = new System.Drawing.Size(778, 344);
+            this.Size = new System.Drawing.Size(854, 312);
             this.gbLicenseInfo.ResumeLayout(false);
             this.gbLicenseInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -658,7 +661,7 @@ namespace DVLD_Project.Licenses
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbLicenseInfo;
+        private Guna.UI2.WinForms.Guna2GroupBox gbLicenseInfo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblIsDetained;
         private System.Windows.Forms.PictureBox pictureBox12;
@@ -702,3 +705,4 @@ namespace DVLD_Project.Licenses
         private System.Windows.Forms.PictureBox pbPersonImage;
     }
 }
+

@@ -24,15 +24,15 @@ namespace DVLD_Project.Applications.Application_Types
 
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(((TextBox)sender).Text))
+            if (string.IsNullOrEmpty(((Control)sender).Text))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(((TextBox)sender), "This Field cannot be empty");
+                errorProvider1.SetError(((Control)sender), "This Field cannot be empty");
                 return;
             }
             else
             {
-                errorProvider1.SetError(((TextBox)sender), null);
+                errorProvider1.SetError(((Control)sender), null);
             }
         }
 

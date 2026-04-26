@@ -32,10 +32,10 @@
             this.lblNumberOfRecords = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.dgvTestTypes = new System.Windows.Forms.DataGridView();
+            this.dgvTestTypes = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmsTestTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editTestTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTestTypes)).BeginInit();
             this.cmsTestTypes.SuspendLayout();
@@ -45,7 +45,7 @@
             // lblNumberOfRecords
             // 
             this.lblNumberOfRecords.AutoSize = true;
-            this.lblNumberOfRecords.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberOfRecords.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumberOfRecords.Location = new System.Drawing.Point(104, 459);
             this.lblNumberOfRecords.Name = "lblNumberOfRecords";
             this.lblNumberOfRecords.Size = new System.Drawing.Size(19, 19);
@@ -55,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 459);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 19);
@@ -65,7 +65,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblTitle.Location = new System.Drawing.Point(246, 203);
             this.lblTitle.Name = "lblTitle";
@@ -84,6 +84,25 @@
             this.dgvTestTypes.ContextMenuStrip = this.cmsTestTypes;
             this.dgvTestTypes.Location = new System.Drawing.Point(11, 257);
             this.dgvTestTypes.Name = "dgvTestTypes";
+            this.dgvTestTypes.AllowUserToAddRows = false;
+            this.dgvTestTypes.AllowUserToDeleteRows = false;
+            this.dgvTestTypes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTestTypes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTestTypes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvTestTypes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTestTypes.ColumnHeadersHeight = 38;
+            this.dgvTestTypes.EnableHeadersVisualStyles = false;
+            this.dgvTestTypes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.dgvTestTypes.RowHeadersVisible = false;
+            this.dgvTestTypes.RowTemplate.Height = 34;
+            this.dgvTestTypes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTestTypes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dgvTestTypes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.dgvTestTypes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvTestTypes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvTestTypes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvTestTypes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            this.dgvTestTypes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.dgvTestTypes.ReadOnly = true;
             this.dgvTestTypes.RowHeadersVisible = false;
             this.dgvTestTypes.Size = new System.Drawing.Size(823, 180);
@@ -107,16 +126,22 @@
             // 
             // btnClose
             // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnClose.Location = new System.Drawing.Point(691, 445);
             this.btnClose.Name = "btnClose";
+            this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.btnClose.BorderRadius = 6;
+            this.btnClose.BorderThickness = 1;
+            this.btnClose.FillColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.btnClose.Size = new System.Drawing.Size(143, 43);
             this.btnClose.TabIndex = 31;
             this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox1
@@ -156,12 +181,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnClose;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNumberOfRecords;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.DataGridView dgvTestTypes;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvTestTypes;
         private System.Windows.Forms.ContextMenuStrip cmsTestTypes;
         private System.Windows.Forms.ToolStripMenuItem editTestTypeToolStripMenuItem;
     }

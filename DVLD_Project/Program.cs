@@ -1,4 +1,5 @@
-﻿using DVLD_Project.Login;
+using DVLD_Project.Global_Classes;
+using DVLD_Project.Login;
 using DVLD_Project.people1;
 using System;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace DVLD_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            clsModernTheme.Enable();
             Application.Run(new frmLogin());
         }
     }

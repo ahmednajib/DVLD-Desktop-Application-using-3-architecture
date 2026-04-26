@@ -31,8 +31,8 @@ namespace DVLD_Project.Licenses.DetainLicense
         {
             this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.gpDetain = new System.Windows.Forms.GroupBox();
-            this.txtFineFees = new System.Windows.Forms.TextBox();
+            this.gpDetain = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtFineFees = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblLicenseID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,10 +48,10 @@ namespace DVLD_Project.Licenses.DetainLicense
             this.lblDetainID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ctrlLicenseInfoWithFilter1 = new DVLD_Project.Licenses.Local_Licenses.Controls.ctrlLicenseInfoWithFilter();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.llShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.llShowLicenseHistory = new System.Windows.Forms.LinkLabel();
-            this.btnDetain = new System.Windows.Forms.Button();
+            this.btnDetain = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gpDetain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -66,7 +66,7 @@ namespace DVLD_Project.Licenses.DetainLicense
             // 
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblTitle.Location = new System.Drawing.Point(39, 12);
+            this.lblTitle.Location = new System.Drawing.Point(39, 2);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(708, 47);
             this.lblTitle.TabIndex = 181;
@@ -76,6 +76,8 @@ namespace DVLD_Project.Licenses.DetainLicense
             // gpDetain
             // 
             this.gpDetain.BackColor = System.Drawing.Color.White;
+            this.gpDetain.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.gpDetain.BorderRadius = 8;
             this.gpDetain.Controls.Add(this.txtFineFees);
             this.gpDetain.Controls.Add(this.pictureBox8);
             this.gpDetain.Controls.Add(this.lblLicenseID);
@@ -91,22 +93,33 @@ namespace DVLD_Project.Licenses.DetainLicense
             this.gpDetain.Controls.Add(this.label5);
             this.gpDetain.Controls.Add(this.lblDetainID);
             this.gpDetain.Controls.Add(this.label4);
-            this.gpDetain.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpDetain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.gpDetain.Location = new System.Drawing.Point(8, 520);
+            this.gpDetain.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.gpDetain.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.gpDetain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.gpDetain.Location = new System.Drawing.Point(12, 470);
             this.gpDetain.Name = "gpDetain";
             this.gpDetain.Padding = new System.Windows.Forms.Padding(12);
-            this.gpDetain.Size = new System.Drawing.Size(774, 166);
+            this.gpDetain.Size = new System.Drawing.Size(839, 166);
             this.gpDetain.TabIndex = 182;
             this.gpDetain.TabStop = false;
             this.gpDetain.Text = "Detain Info";
             // 
             // txtFineFees
             // 
-            this.txtFineFees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFineFees.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.txtFineFees.Location = new System.Drawing.Point(235, 125);
+            this.txtFineFees.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.txtFineFees.BorderRadius = 6;
+            this.txtFineFees.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFineFees.DefaultText = "";
+            this.txtFineFees.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.txtFineFees.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtFineFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtFineFees.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(165)))), ((int)(((byte)(250)))));
+            this.txtFineFees.Location = new System.Drawing.Point(235, 126);
+            this.txtFineFees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFineFees.Name = "txtFineFees";
+            this.txtFineFees.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.txtFineFees.PlaceholderText = "";
+            this.txtFineFees.SelectedText = "";
             this.txtFineFees.Size = new System.Drawing.Size(150, 26);
             this.txtFineFees.TabIndex = 196;
             this.txtFineFees.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFineFees_KeyPress);
@@ -275,33 +288,34 @@ namespace DVLD_Project.Licenses.DetainLicense
             this.ctrlLicenseInfoWithFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ctrlLicenseInfoWithFilter1.FilterEnabled = true;
             this.ctrlLicenseInfoWithFilter1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(-4, 68);
+            this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(-4, 49);
             this.ctrlLicenseInfoWithFilter1.Name = "ctrlLicenseInfoWithFilter1";
-            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(789, 453);
+            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(864, 418);
             this.ctrlLicenseInfoWithFilter1.TabIndex = 183;
             this.ctrlLicenseInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlLicenseInfoWithFilter1_OnLicenseSelected);
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.btnClose.BorderRadius = 6;
+            this.btnClose.BorderThickness = 1;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.btnClose.FillColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(474, 701);
+            this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnClose.Location = new System.Drawing.Point(549, 643);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.btnClose.Size = new System.Drawing.Size(146, 38);
             this.btnClose.TabIndex = 185;
             this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // llShowLicenseInfo
@@ -311,7 +325,7 @@ namespace DVLD_Project.Licenses.DetainLicense
             this.llShowLicenseInfo.Enabled = false;
             this.llShowLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.llShowLicenseInfo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.llShowLicenseInfo.Location = new System.Drawing.Point(231, 711);
+            this.llShowLicenseInfo.Location = new System.Drawing.Point(204, 653);
             this.llShowLicenseInfo.Name = "llShowLicenseInfo";
             this.llShowLicenseInfo.Size = new System.Drawing.Size(124, 19);
             this.llShowLicenseInfo.TabIndex = 188;
@@ -326,7 +340,7 @@ namespace DVLD_Project.Licenses.DetainLicense
             this.llShowLicenseHistory.Enabled = false;
             this.llShowLicenseHistory.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.llShowLicenseHistory.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.llShowLicenseHistory.Location = new System.Drawing.Point(20, 711);
+            this.llShowLicenseHistory.Location = new System.Drawing.Point(20, 653);
             this.llShowLicenseHistory.Name = "llShowLicenseHistory";
             this.llShowLicenseHistory.Size = new System.Drawing.Size(144, 19);
             this.llShowLicenseHistory.TabIndex = 187;
@@ -337,23 +351,22 @@ namespace DVLD_Project.Licenses.DetainLicense
             // btnDetain
             // 
             this.btnDetain.BackColor = System.Drawing.Color.White;
+            this.btnDetain.BorderRadius = 6;
             this.btnDetain.Enabled = false;
-            this.btnDetain.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.btnDetain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
-            this.btnDetain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.btnDetain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetain.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.btnDetain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.btnDetain.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDetain.ForeColor = System.Drawing.Color.White;
+            this.btnDetain.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnDetain.Image = global::DVLD_Project.Properties.Resources.Detain_32;
-            this.btnDetain.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetain.Location = new System.Drawing.Point(631, 701);
+            this.btnDetain.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDetain.Location = new System.Drawing.Point(706, 643);
             this.btnDetain.Name = "btnDetain";
             this.btnDetain.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnDetain.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.btnDetain.Size = new System.Drawing.Size(146, 38);
             this.btnDetain.TabIndex = 186;
             this.btnDetain.Text = "Detain";
-            this.btnDetain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDetain.UseVisualStyleBackColor = false;
+            this.btnDetain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnDetain.Click += new System.EventHandler(this.btnDetain_Click);
             // 
             // errorProvider1
@@ -367,7 +380,7 @@ namespace DVLD_Project.Licenses.DetainLicense
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(787, 749);
+            this.ClientSize = new System.Drawing.Size(861, 688);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.llShowLicenseInfo);
             this.Controls.Add(this.btnDetain);
@@ -398,8 +411,8 @@ namespace DVLD_Project.Licenses.DetainLicense
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.GroupBox gpDetain;
-        private System.Windows.Forms.TextBox txtFineFees;
+        private Guna.UI2.WinForms.Guna2GroupBox gpDetain;
+        private Guna.UI2.WinForms.Guna2TextBox txtFineFees;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lblLicenseID;
         private System.Windows.Forms.Label label10;
@@ -415,10 +428,12 @@ namespace DVLD_Project.Licenses.DetainLicense
         private System.Windows.Forms.Label lblDetainID;
         private System.Windows.Forms.Label label4;
         private Local_Licenses.Controls.ctrlLicenseInfoWithFilter ctrlLicenseInfoWithFilter1;
-        private System.Windows.Forms.Button btnClose;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.LinkLabel llShowLicenseInfo;
-        private System.Windows.Forms.Button btnDetain;
+        private Guna.UI2.WinForms.Guna2Button btnDetain;
         private System.Windows.Forms.LinkLabel llShowLicenseHistory;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
+
+

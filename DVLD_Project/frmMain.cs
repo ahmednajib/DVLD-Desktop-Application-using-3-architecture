@@ -24,6 +24,68 @@ namespace DVLD_Project
         {
             InitializeComponent();
             _LoginForm = LoginForm;
+            ConfigureDashboardHome();
+        }
+
+        private void ConfigureDashboardHome()
+        {
+            pictureBox1.Visible = false;
+
+            ctrlDashboardHome1.AddPersonRequested += ctrlDashboardHome1_AddPersonRequested;
+            ctrlDashboardHome1.AddUserRequested += ctrlDashboardHome1_AddUserRequested;
+            ctrlDashboardHome1.NewLocalLicenseApplicationRequested += ctrlDashboardHome1_NewLocalLicenseApplicationRequested;
+            ctrlDashboardHome1.NewInternationalLicenseRequested += ctrlDashboardHome1_NewInternationalLicenseRequested;
+            ctrlDashboardHome1.DetainLicenseRequested += ctrlDashboardHome1_DetainLicenseRequested;
+        }
+
+        private void ctrlDashboardHome1_AddPersonRequested(object sender, EventArgs e)
+        {
+            using (frmAddUpdatePerson frm = new frmAddUpdatePerson())
+            {
+                frm.ShowDialog();
+            }
+
+            ctrlDashboardHome1.RefreshDashboard();
+        }
+
+        private void ctrlDashboardHome1_AddUserRequested(object sender, EventArgs e)
+        {
+            using (frmAddUpdateUser frm = new frmAddUpdateUser())
+            {
+                frm.ShowDialog();
+            }
+
+            ctrlDashboardHome1.RefreshDashboard();
+        }
+
+        private void ctrlDashboardHome1_NewLocalLicenseApplicationRequested(object sender, EventArgs e)
+        {
+            using (frmAddUpdateLDLApplication frm = new frmAddUpdateLDLApplication())
+            {
+                frm.ShowDialog();
+            }
+
+            ctrlDashboardHome1.RefreshDashboard();
+        }
+
+        private void ctrlDashboardHome1_NewInternationalLicenseRequested(object sender, EventArgs e)
+        {
+            using (frmNewInternationalLicenseApplication frm = new frmNewInternationalLicenseApplication())
+            {
+                frm.ShowDialog();
+            }
+
+            ctrlDashboardHome1.RefreshDashboard();
+        }
+
+        private void ctrlDashboardHome1_DetainLicenseRequested(object sender, EventArgs e)
+        {
+            using (frmDetainLicense frm = new frmDetainLicense())
+            {
+                frm.ShowDialog();
+            }
+
+            ctrlDashboardHome1.RefreshDashboard();
         }
 
         private void tsmiPeopleManagement_Click(object sender, EventArgs e)
