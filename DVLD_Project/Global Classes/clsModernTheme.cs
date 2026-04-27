@@ -443,6 +443,9 @@ namespace DVLD_Project.Global_Classes
 
         private static bool ShouldSkipChildStyling(Control control)
         {
+            if (control is Form form && form.Name == "frmLogin")
+                return true;
+
             return control is Guna2TextBox ||
                    control is Guna2ComboBox ||
                    control is Guna2DateTimePicker ||
