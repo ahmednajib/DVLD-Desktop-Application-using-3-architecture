@@ -57,10 +57,10 @@ namespace DVLD_Project.Licenses.Local_Licenses
             // 
             this.ctrlDriverLicenses1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ctrlDriverLicenses1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlDriverLicenses1.Location = new System.Drawing.Point(4, 466);
+            this.ctrlDriverLicenses1.Location = new System.Drawing.Point(4, 467);
             this.ctrlDriverLicenses1.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlDriverLicenses1.Name = "ctrlDriverLicenses1";
-            this.ctrlDriverLicenses1.Size = new System.Drawing.Size(761, 294);
+            this.ctrlDriverLicenses1.Size = new System.Drawing.Size(815, 281);
             this.ctrlDriverLicenses1.TabIndex = 133;
             // 
             // ctrlPersonCardWithFilter1
@@ -72,7 +72,7 @@ namespace DVLD_Project.Licenses.Local_Licenses
             this.ctrlPersonCardWithFilter1.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
             this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(821, 460);
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(821, 467);
             this.ctrlPersonCardWithFilter1.TabIndex = 132;
             // 
             // frmShowPersonLicenseHistory

@@ -30,7 +30,6 @@ namespace DVLD_Project.Licenses.DetainLicense
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.gpDetain = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtFineFees = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -53,6 +52,7 @@ namespace DVLD_Project.Licenses.DetainLicense
             this.llShowLicenseHistory = new System.Windows.Forms.LinkLabel();
             this.btnDetain = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblTitle = new System.Windows.Forms.Label();
             this.gpDetain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,17 +61,6 @@ namespace DVLD_Project.Licenses.DetainLicense
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblTitle.Location = new System.Drawing.Point(39, 2);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(708, 47);
-            this.lblTitle.TabIndex = 181;
-            this.lblTitle.Text = "Detain License";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gpDetain
             // 
@@ -373,6 +362,17 @@ namespace DVLD_Project.Licenses.DetainLicense
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblTitle.Location = new System.Drawing.Point(76, 2);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(708, 47);
+            this.lblTitle.TabIndex = 189;
+            this.lblTitle.Text = "Detain License";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmDetainLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -381,12 +381,12 @@ namespace DVLD_Project.Licenses.DetainLicense
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(861, 688);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.llShowLicenseInfo);
             this.Controls.Add(this.btnDetain);
             this.Controls.Add(this.llShowLicenseHistory);
             this.Controls.Add(this.ctrlLicenseInfoWithFilter1);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.gpDetain);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -409,8 +409,6 @@ namespace DVLD_Project.Licenses.DetainLicense
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2GroupBox gpDetain;
         private Guna.UI2.WinForms.Guna2TextBox txtFineFees;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -433,6 +431,7 @@ namespace DVLD_Project.Licenses.DetainLicense
         private Guna.UI2.WinForms.Guna2Button btnDetain;
         private System.Windows.Forms.LinkLabel llShowLicenseHistory;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
 

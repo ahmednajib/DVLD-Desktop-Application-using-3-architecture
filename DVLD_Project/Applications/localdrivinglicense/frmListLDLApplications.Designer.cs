@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmsApplications = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -58,14 +58,10 @@
             this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbِApplications = new System.Windows.Forms.PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNewApplication = new Guna.UI2.WinForms.Guna2Button();
             this.cmsApplications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicenseApplications)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbِApplications)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsApplications
@@ -226,41 +222,42 @@
             this.dgvLocalDrivingLicenseApplications.AllowUserToAddRows = false;
             this.dgvLocalDrivingLicenseApplications.AllowUserToDeleteRows = false;
             this.dgvLocalDrivingLicenseApplications.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.dgvLocalDrivingLicenseApplications.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLocalDrivingLicenseApplications.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvLocalDrivingLicenseApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dgvLocalDrivingLicenseApplications.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLocalDrivingLicenseApplications.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvLocalDrivingLicenseApplications.ColumnHeadersHeight = 4;
+            this.dgvLocalDrivingLicenseApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvLocalDrivingLicenseApplications.ContextMenuStrip = this.cmsApplications;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLocalDrivingLicenseApplications.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLocalDrivingLicenseApplications.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLocalDrivingLicenseApplications.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvLocalDrivingLicenseApplications.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.dgvLocalDrivingLicenseApplications.Location = new System.Drawing.Point(12, 280);
+            this.dgvLocalDrivingLicenseApplications.Location = new System.Drawing.Point(12, 99);
             this.dgvLocalDrivingLicenseApplications.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvLocalDrivingLicenseApplications.MultiSelect = false;
             this.dgvLocalDrivingLicenseApplications.Name = "dgvLocalDrivingLicenseApplications";
             this.dgvLocalDrivingLicenseApplications.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLocalDrivingLicenseApplications.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLocalDrivingLicenseApplications.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLocalDrivingLicenseApplications.RowHeadersVisible = false;
             this.dgvLocalDrivingLicenseApplications.RowTemplate.Height = 34;
             this.dgvLocalDrivingLicenseApplications.Size = new System.Drawing.Size(985, 251);
@@ -277,7 +274,7 @@
             this.dgvLocalDrivingLicenseApplications.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvLocalDrivingLicenseApplications.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 8F);
             this.dgvLocalDrivingLicenseApplications.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvLocalDrivingLicenseApplications.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalDrivingLicenseApplications.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvLocalDrivingLicenseApplications.ThemeStyle.HeaderStyle.Height = 4;
             this.dgvLocalDrivingLicenseApplications.ThemeStyle.ReadOnly = true;
             this.dgvLocalDrivingLicenseApplications.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -292,7 +289,7 @@
             // 
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCount.Location = new System.Drawing.Point(106, 545);
+            this.lblRecordsCount.Location = new System.Drawing.Point(106, 363);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(23, 20);
             this.lblRecordsCount.TabIndex = 123;
@@ -302,7 +299,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 544);
+            this.label2.Location = new System.Drawing.Point(7, 363);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 21);
             this.label2.TabIndex = 122;
@@ -327,7 +324,7 @@
             "National No.",
             "Full Name",
             "Status"});
-            this.cbFilterBy.Location = new System.Drawing.Point(87, 241);
+            this.cbFilterBy.Location = new System.Drawing.Point(87, 60);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(210, 36);
             this.cbFilterBy.TabIndex = 130;
@@ -343,7 +340,7 @@
             this.txtFilterValue.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtFilterValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtFilterValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(165)))), ((int)(((byte)(250)))));
-            this.txtFilterValue.Location = new System.Drawing.Point(304, 245);
+            this.txtFilterValue.Location = new System.Drawing.Point(304, 64);
             this.txtFilterValue.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
@@ -358,7 +355,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 249);
+            this.label1.Location = new System.Drawing.Point(11, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 128;
@@ -368,38 +365,12 @@
             // 
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(221, 196);
+            this.lblTitle.Location = new System.Drawing.Point(221, 2);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(568, 39);
             this.lblTitle.TabIndex = 131;
             this.lblTitle.Text = "Local Driving License Applications";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.Local_32;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(581, 71);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 133;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbِApplications
-            // 
-            this.pbِApplications.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbِApplications.Image = global::DVLD_Project.Properties.Resources.Applications;
-            this.pbِApplications.InitialImage = null;
-            this.pbِApplications.Location = new System.Drawing.Point(395, 4);
-            this.pbِApplications.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pbِApplications.Name = "pbِApplications";
-            this.pbِApplications.Size = new System.Drawing.Size(220, 189);
-            this.pbِApplications.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbِApplications.TabIndex = 132;
-            this.pbِApplications.TabStop = false;
             // 
             // btnClose
             // 
@@ -413,7 +384,7 @@
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClose.Location = new System.Drawing.Point(862, 537);
+            this.btnClose.Location = new System.Drawing.Point(862, 356);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.btnClose.Size = new System.Drawing.Size(135, 36);
@@ -428,7 +399,7 @@
             this.btnAddNewApplication.ForeColor = System.Drawing.Color.White;
             this.btnAddNewApplication.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnAddNewApplication.Image = global::DVLD_Project.Properties.Resources.New_Application_64;
-            this.btnAddNewApplication.Location = new System.Drawing.Point(905, 232);
+            this.btnAddNewApplication.Location = new System.Drawing.Point(905, 51);
             this.btnAddNewApplication.Name = "btnAddNewApplication";
             this.btnAddNewApplication.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.btnAddNewApplication.Size = new System.Drawing.Size(92, 43);
@@ -440,10 +411,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1011, 579);
+            this.ClientSize = new System.Drawing.Size(1011, 395);
             this.Controls.Add(this.btnAddNewApplication);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pbِApplications);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.cbFilterBy);
             this.Controls.Add(this.txtFilterValue);
@@ -460,8 +429,6 @@
             this.Load += new System.EventHandler(this.frmListLDLApplications_Load);
             this.cmsApplications.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicenseApplications)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbِApplications)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,8 +461,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbFilterBy;
         private Guna.UI2.WinForms.Guna2TextBox txtFilterValue;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pbِApplications;
         private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Button btnAddNewApplication;
     }

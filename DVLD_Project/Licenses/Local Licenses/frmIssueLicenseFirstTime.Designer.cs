@@ -41,7 +41,7 @@ namespace DVLD_Project.Licenses.Local_Licenses
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.Notes_32;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 351);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 341);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -53,7 +53,7 @@ namespace DVLD_Project.Licenses.Local_Licenses
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.label1.Location = new System.Drawing.Point(43, 355);
+            this.label1.Location = new System.Drawing.Point(43, 345);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 19);
@@ -70,7 +70,7 @@ namespace DVLD_Project.Licenses.Local_Licenses
             this.txtNotes.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtNotes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(165)))), ((int)(((byte)(250)))));
-            this.txtNotes.Location = new System.Drawing.Point(117, 351);
+            this.txtNotes.Location = new System.Drawing.Point(117, 341);
             this.txtNotes.MaxLength = 500;
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
@@ -128,7 +128,7 @@ namespace DVLD_Project.Licenses.Local_Licenses
             // 
             this.ctrlDrivingLicenseApplicationInfo1.BackColor = System.Drawing.Color.White;
             this.ctrlDrivingLicenseApplicationInfo1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(5, 12);
+            this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(5, 2);
             this.ctrlDrivingLicenseApplicationInfo1.Name = "ctrlDrivingLicenseApplicationInfo1";
             this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(754, 336);
             this.ctrlDrivingLicenseApplicationInfo1.TabIndex = 181;
@@ -140,7 +140,7 @@ namespace DVLD_Project.Licenses.Local_Licenses
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(762, 413);
+            this.ClientSize = new System.Drawing.Size(762, 399);
             this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnIssueLicense);

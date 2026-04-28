@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.cbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNumberOfRecords = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrivers)).BeginInit();
             this.cmsDrivers.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +60,7 @@
             this.txtFilterValue.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtFilterValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtFilterValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(165)))), ((int)(((byte)(250)))));
-            this.txtFilterValue.Location = new System.Drawing.Point(256, 254);
+            this.txtFilterValue.Location = new System.Drawing.Point(256, 80);
             this.txtFilterValue.Margin = new System.Windows.Forms.Padding(4);
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
@@ -85,11 +83,11 @@
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClose.Location = new System.Drawing.Point(688, 610);
+            this.btnClose.Location = new System.Drawing.Point(728, 430);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.btnClose.Size = new System.Drawing.Size(190, 46);
+            this.btnClose.Size = new System.Drawing.Size(150, 41);
             this.btnClose.TabIndex = 19;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -113,7 +111,7 @@
             "Person ID",
             "National No",
             "Full Name"});
-            this.cbFilterBy.Location = new System.Drawing.Point(99, 249);
+            this.cbFilterBy.Location = new System.Drawing.Point(99, 75);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(145, 36);
             this.cbFilterBy.TabIndex = 18;
@@ -124,29 +122,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
-            this.label4.Location = new System.Drawing.Point(19, 257);
+            this.label4.Location = new System.Drawing.Point(19, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 17;
             this.label4.Text = "Filter By:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.Driver_Main;
-            this.pictureBox1.Location = new System.Drawing.Point(337, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // lblNumberOfRecords
             // 
             this.lblNumberOfRecords.AutoSize = true;
             this.lblNumberOfRecords.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumberOfRecords.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.lblNumberOfRecords.Location = new System.Drawing.Point(114, 623);
+            this.lblNumberOfRecords.Location = new System.Drawing.Point(114, 443);
             this.lblNumberOfRecords.Name = "lblNumberOfRecords";
             this.lblNumberOfRecords.Size = new System.Drawing.Size(18, 20);
             this.lblNumberOfRecords.TabIndex = 15;
@@ -157,7 +144,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
-            this.label2.Location = new System.Drawing.Point(19, 623);
+            this.label2.Location = new System.Drawing.Point(19, 443);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 14;
@@ -168,7 +155,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.label1.Location = new System.Drawing.Point(308, 176);
+            this.label1.Location = new System.Drawing.Point(308, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 45);
             this.label1.TabIndex = 13;
@@ -180,35 +167,35 @@
             this.dgvDrivers.AllowUserToDeleteRows = false;
             this.dgvDrivers.AllowUserToOrderColumns = true;
             this.dgvDrivers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.dgvDrivers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDrivers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dgvDrivers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDrivers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDrivers.ColumnHeadersHeight = 38;
             this.dgvDrivers.ContextMenuStrip = this.cmsDrivers;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDrivers.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDrivers.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDrivers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.dgvDrivers.Location = new System.Drawing.Point(23, 295);
+            this.dgvDrivers.Location = new System.Drawing.Point(23, 121);
             this.dgvDrivers.MultiSelect = false;
             this.dgvDrivers.Name = "dgvDrivers";
             this.dgvDrivers.ReadOnly = true;
             this.dgvDrivers.RowHeadersVisible = false;
             this.dgvDrivers.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDrivers.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDrivers.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDrivers.RowTemplate.Height = 36;
             this.dgvDrivers.Size = new System.Drawing.Size(855, 300);
             this.dgvDrivers.TabIndex = 12;
@@ -275,12 +262,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(900, 669);
+            this.ClientSize = new System.Drawing.Size(900, 475);
             this.Controls.Add(this.txtFilterValue);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbFilterBy);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblNumberOfRecords);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -293,7 +279,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Drivers";
             this.Load += new System.EventHandler(this.frmListDrivers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrivers)).EndInit();
             this.cmsDrivers.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -307,7 +292,6 @@
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2ComboBox cbFilterBy;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNumberOfRecords;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

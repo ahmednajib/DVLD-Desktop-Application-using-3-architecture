@@ -42,20 +42,17 @@ namespace DVLD_Project.Tests.Controls
                     case clsTestTypes.enTestType.VisionTest:
                         {
                             gbTestType.Text = "Vision Test";
-                            pbTestTypeImage.Image = Resources.Vision_512;
                             break;
                         }
 
                     case clsTestTypes.enTestType.WrittenTest:
                         {
                             gbTestType.Text = "Written Test";
-                            pbTestTypeImage.Image = Resources.Written_Test_512;
                             break;
                         }
                     case clsTestTypes.enTestType.StreetTest:
                         {
                             gbTestType.Text = "Street Test";
-                            pbTestTypeImage.Image = Resources.driving_test_512;
                             break;
                         }
                 }

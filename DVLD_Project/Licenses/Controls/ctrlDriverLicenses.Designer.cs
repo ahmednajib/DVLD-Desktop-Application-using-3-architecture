@@ -75,7 +75,7 @@ namespace DVLD_Project.Licenses.Controls
             this.groupBox1.Margin = new System.Windows.Forms.Padding(8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(12);
-            this.groupBox1.Size = new System.Drawing.Size(742, 276);
+            this.groupBox1.Size = new System.Drawing.Size(804, 276);
             this.groupBox1.TabIndex = 132;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driver Licenses";
@@ -88,7 +88,7 @@ namespace DVLD_Project.Licenses.Controls
             this.tcDriverLicenses.Location = new System.Drawing.Point(14, 42);
             this.tcDriverLicenses.Name = "tcDriverLicenses";
             this.tcDriverLicenses.SelectedIndex = 0;
-            this.tcDriverLicenses.Size = new System.Drawing.Size(714, 229);
+            this.tcDriverLicenses.Size = new System.Drawing.Size(775, 229);
             this.tcDriverLicenses.TabIndex = 131;
             // 
             // tpLocalLicenses
@@ -101,7 +101,7 @@ namespace DVLD_Project.Licenses.Controls
             this.tpLocalLicenses.Location = new System.Drawing.Point(4, 26);
             this.tpLocalLicenses.Name = "tpLocalLicenses";
             this.tpLocalLicenses.Padding = new System.Windows.Forms.Padding(12);
-            this.tpLocalLicenses.Size = new System.Drawing.Size(706, 199);
+            this.tpLocalLicenses.Size = new System.Drawing.Size(767, 199);
             this.tpLocalLicenses.TabIndex = 0;
             this.tpLocalLicenses.Text = "Local";
             // 
@@ -172,7 +172,7 @@ namespace DVLD_Project.Licenses.Controls
             this.dgvLocalLicensesHistory.ReadOnly = true;
             this.dgvLocalLicensesHistory.RowHeadersVisible = false;
             this.dgvLocalLicensesHistory.RowTemplate.Height = 32;
-            this.dgvLocalLicensesHistory.Size = new System.Drawing.Size(682, 125);
+            this.dgvLocalLicensesHistory.Size = new System.Drawing.Size(727, 125);
             this.dgvLocalLicensesHistory.TabIndex = 132;
             this.dgvLocalLicensesHistory.TabStop = false;
             this.dgvLocalLicensesHistory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
@@ -345,7 +345,7 @@ namespace DVLD_Project.Licenses.Controls
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ctrlDriverLicenses";
-            this.Size = new System.Drawing.Size(758, 292);
+            this.Size = new System.Drawing.Size(815, 292);
             this.groupBox1.ResumeLayout(false);
             this.tcDriverLicenses.ResumeLayout(false);
             this.tpLocalLicenses.ResumeLayout(false);

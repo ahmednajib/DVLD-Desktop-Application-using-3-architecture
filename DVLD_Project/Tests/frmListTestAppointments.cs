@@ -27,17 +27,14 @@ namespace DVLD_Project.Tests
                 case clsTestTypes.enTestType.VisionTest:
                     this.Text = "Vision Test";
                     lblTitle.Text = "Vision Test Appointments";
-                    pbTestTypeImage.Image = Resources.Vision_512;
                     break;
                 case clsTestTypes.enTestType.WrittenTest:
                     this.Text = "Written Test";
                     lblTitle.Text = "Written Test Appointments";
-                    pbTestTypeImage.Image = Resources.Written_Test_512;
                     break;
                 case clsTestTypes.enTestType.StreetTest:
                     this.Text = "Street Test";
                     lblTitle.Text = "Street Test Appointments";
-                    pbTestTypeImage.Image = Resources.driving_test_512;
                     break;
 
             }

@@ -54,7 +54,7 @@
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClose.Location = new System.Drawing.Point(664, 521);
+            this.btnClose.Location = new System.Drawing.Point(662, 521);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
@@ -85,7 +85,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlUserCard1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUserInfo";

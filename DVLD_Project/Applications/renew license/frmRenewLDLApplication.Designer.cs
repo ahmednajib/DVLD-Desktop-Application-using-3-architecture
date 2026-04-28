@@ -530,11 +530,11 @@
             this.btnRenewLicense.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnRenewLicense.Image = global::DVLD_Project.Properties.Resources.Renew_Driving_License_32;
             this.btnRenewLicense.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRenewLicense.Location = new System.Drawing.Point(729, 683);
+            this.btnRenewLicense.Location = new System.Drawing.Point(749, 678);
             this.btnRenewLicense.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRenewLicense.Name = "btnRenewLicense";
             this.btnRenewLicense.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
-            this.btnRenewLicense.Size = new System.Drawing.Size(118, 30);
+            this.btnRenewLicense.Size = new System.Drawing.Size(119, 36);
             this.btnRenewLicense.TabIndex = 182;
             this.btnRenewLicense.Text = " Renew";
             this.btnRenewLicense.Click += new System.EventHandler(this.btnRenewLicense_Click);
@@ -551,11 +551,11 @@
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClose.Location = new System.Drawing.Point(600, 683);
+            this.btnClose.Location = new System.Drawing.Point(619, 678);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.btnClose.Size = new System.Drawing.Size(118, 30);
+            this.btnClose.Size = new System.Drawing.Size(119, 36);
             this.btnClose.TabIndex = 181;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmsApplications = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.PesonDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,10 +50,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnReleaseDetainedLicense = new Guna.UI2.WinForms.Guna2Button();
-            this.pbPersonImage = new System.Windows.Forms.PictureBox();
             this.cmsApplications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetainedLicenses)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsApplications
@@ -126,7 +124,7 @@
             "All",
             "Yes",
             "No"});
-            this.cbIsReleased.Location = new System.Drawing.Point(300, 277);
+            this.cbIsReleased.Location = new System.Drawing.Point(300, 84);
             this.cbIsReleased.Name = "cbIsReleased";
             this.cbIsReleased.Size = new System.Drawing.Size(121, 36);
             this.cbIsReleased.TabIndex = 165;
@@ -153,7 +151,7 @@
             "National No.",
             "Full Name",
             "Release Application ID"});
-            this.cbFilterBy.Location = new System.Drawing.Point(84, 277);
+            this.cbFilterBy.Location = new System.Drawing.Point(84, 84);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(210, 36);
             this.cbFilterBy.TabIndex = 163;
@@ -169,13 +167,13 @@
             this.txtFilterValue.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtFilterValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtFilterValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(165)))), ((int)(((byte)(250)))));
-            this.txtFilterValue.Location = new System.Drawing.Point(301, 328);
+            this.txtFilterValue.Location = new System.Drawing.Point(301, 90);
             this.txtFilterValue.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.txtFilterValue.PlaceholderText = "";
             this.txtFilterValue.SelectedText = "";
-            this.txtFilterValue.Size = new System.Drawing.Size(256, 20);
+            this.txtFilterValue.Size = new System.Drawing.Size(256, 25);
             this.txtFilterValue.TabIndex = 162;
             this.txtFilterValue.TextChanged += new System.EventHandler(this.txtFilterValue_TextChanged);
             this.txtFilterValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterValue_KeyPress);
@@ -184,7 +182,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 285);
+            this.label1.Location = new System.Drawing.Point(2, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 161;
@@ -194,7 +192,7 @@
             // 
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(282, 194);
+            this.lblTitle.Location = new System.Drawing.Point(282, 1);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(568, 39);
             this.lblTitle.TabIndex = 160;
@@ -209,7 +207,7 @@
             this.btnDetainLicense.ForeColor = System.Drawing.Color.White;
             this.btnDetainLicense.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnDetainLicense.Image = global::DVLD_Project.Properties.Resources.Detain_64;
-            this.btnDetainLicense.Location = new System.Drawing.Point(1045, 266);
+            this.btnDetainLicense.Location = new System.Drawing.Point(1043, 73);
             this.btnDetainLicense.Name = "btnDetainLicense";
             this.btnDetainLicense.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.btnDetainLicense.Size = new System.Drawing.Size(84, 44);
@@ -221,44 +219,45 @@
             this.dgvDetainedLicenses.AllowUserToAddRows = false;
             this.dgvDetainedLicenses.AllowUserToDeleteRows = false;
             this.dgvDetainedLicenses.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.dgvDetainedLicenses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetainedLicenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvDetainedLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dgvDetainedLicenses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetainedLicenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDetainedLicenses.ColumnHeadersHeight = 4;
+            this.dgvDetainedLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDetainedLicenses.ContextMenuStrip = this.cmsApplications;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetainedLicenses.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetainedLicenses.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDetainedLicenses.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvDetainedLicenses.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.dgvDetainedLicenses.Location = new System.Drawing.Point(6, 317);
+            this.dgvDetainedLicenses.Location = new System.Drawing.Point(6, 124);
             this.dgvDetainedLicenses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDetainedLicenses.MultiSelect = false;
             this.dgvDetainedLicenses.Name = "dgvDetainedLicenses";
             this.dgvDetainedLicenses.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetainedLicenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetainedLicenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDetainedLicenses.RowHeadersVisible = false;
             this.dgvDetainedLicenses.RowTemplate.Height = 34;
-            this.dgvDetainedLicenses.Size = new System.Drawing.Size(1120, 259);
+            this.dgvDetainedLicenses.Size = new System.Drawing.Size(1119, 259);
             this.dgvDetainedLicenses.TabIndex = 168;
             this.dgvDetainedLicenses.TabStop = false;
             this.dgvDetainedLicenses.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
@@ -272,7 +271,7 @@
             this.dgvDetainedLicenses.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDetainedLicenses.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 8F);
             this.dgvDetainedLicenses.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvDetainedLicenses.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetainedLicenses.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDetainedLicenses.ThemeStyle.HeaderStyle.Height = 4;
             this.dgvDetainedLicenses.ThemeStyle.ReadOnly = true;
             this.dgvDetainedLicenses.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -287,7 +286,7 @@
             // 
             this.lblTotalRecords.AutoSize = true;
             this.lblTotalRecords.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalRecords.Location = new System.Drawing.Point(98, 593);
+            this.lblTotalRecords.Location = new System.Drawing.Point(98, 400);
             this.lblTotalRecords.Name = "lblTotalRecords";
             this.lblTotalRecords.Size = new System.Drawing.Size(20, 17);
             this.lblTotalRecords.TabIndex = 171;
@@ -297,7 +296,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 589);
+            this.label5.Location = new System.Drawing.Point(2, 398);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 21);
             this.label5.TabIndex = 170;
@@ -315,7 +314,7 @@
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClose.Location = new System.Drawing.Point(990, 582);
+            this.btnClose.Location = new System.Drawing.Point(990, 390);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.btnClose.Size = new System.Drawing.Size(135, 36);
@@ -331,32 +330,19 @@
             this.btnReleaseDetainedLicense.ForeColor = System.Drawing.Color.White;
             this.btnReleaseDetainedLicense.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnReleaseDetainedLicense.Image = global::DVLD_Project.Properties.Resources.Release_Detained_License_64;
-            this.btnReleaseDetainedLicense.Location = new System.Drawing.Point(951, 266);
+            this.btnReleaseDetainedLicense.Location = new System.Drawing.Point(949, 73);
             this.btnReleaseDetainedLicense.Name = "btnReleaseDetainedLicense";
             this.btnReleaseDetainedLicense.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.btnReleaseDetainedLicense.Size = new System.Drawing.Size(84, 44);
             this.btnReleaseDetainedLicense.TabIndex = 167;
             this.btnReleaseDetainedLicense.Click += new System.EventHandler(this.btnReleaseDetainedLicense_Click);
             // 
-            // pbPersonImage
-            // 
-            this.pbPersonImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbPersonImage.Image = global::DVLD_Project.Properties.Resources.Detain_512;
-            this.pbPersonImage.InitialImage = null;
-            this.pbPersonImage.Location = new System.Drawing.Point(456, 3);
-            this.pbPersonImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pbPersonImage.Name = "pbPersonImage";
-            this.pbPersonImage.Size = new System.Drawing.Size(220, 189);
-            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPersonImage.TabIndex = 164;
-            this.pbPersonImage.TabStop = false;
-            // 
             // frmListDetainedLicenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1130, 624);
+            this.ClientSize = new System.Drawing.Size(1130, 429);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTotalRecords);
             this.Controls.Add(this.label5);
@@ -367,7 +353,6 @@
             this.Controls.Add(this.cbFilterBy);
             this.Controls.Add(this.txtFilterValue);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbPersonImage);
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmListDetainedLicenses";
@@ -377,7 +362,6 @@
             this.Load += new System.EventHandler(this.frmListDetainedLicenses_Load);
             this.cmsApplications.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetainedLicenses)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,7 +379,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbFilterBy;
         private Guna.UI2.WinForms.Guna2TextBox txtFilterValue;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pbPersonImage;
         private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Button btnReleaseDetainedLicense;
         private Guna.UI2.WinForms.Guna2Button btnDetainLicense;

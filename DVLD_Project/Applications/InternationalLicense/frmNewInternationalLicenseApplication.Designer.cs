@@ -86,7 +86,7 @@
             this.llShowLicenseInfo.AutoSize = true;
             this.llShowLicenseInfo.Enabled = false;
             this.llShowLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llShowLicenseInfo.Location = new System.Drawing.Point(212, 690);
+            this.llShowLicenseInfo.Location = new System.Drawing.Point(212, 661);
             this.llShowLicenseInfo.Name = "llShowLicenseInfo";
             this.llShowLicenseInfo.Size = new System.Drawing.Size(147, 21);
             this.llShowLicenseInfo.TabIndex = 182;
@@ -99,7 +99,7 @@
             this.llShowLicenseHistory.AutoSize = true;
             this.llShowLicenseHistory.Enabled = false;
             this.llShowLicenseHistory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llShowLicenseHistory.Location = new System.Drawing.Point(2, 690);
+            this.llShowLicenseHistory.Location = new System.Drawing.Point(2, 661);
             this.llShowLicenseHistory.Name = "llShowLicenseHistory";
             this.llShowLicenseHistory.Size = new System.Drawing.Size(179, 21);
             this.llShowLicenseHistory.TabIndex = 181;
@@ -117,7 +117,7 @@
             this.btnIssueLicense.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnIssueLicense.Image = global::DVLD_Project.Properties.Resources.International_32;
             this.btnIssueLicense.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnIssueLicense.Location = new System.Drawing.Point(855, 619);
+            this.btnIssueLicense.Location = new System.Drawing.Point(734, 652);
             this.btnIssueLicense.Name = "btnIssueLicense";
             this.btnIssueLicense.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.btnIssueLicense.Size = new System.Drawing.Size(126, 37);
@@ -137,7 +137,7 @@
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClose.Location = new System.Drawing.Point(654, 681);
+            this.btnClose.Location = new System.Drawing.Point(580, 652);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
@@ -177,9 +177,9 @@
             this.gpApplicationInfo.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.gpApplicationInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.gpApplicationInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
-            this.gpApplicationInfo.Location = new System.Drawing.Point(3, 493);
+            this.gpApplicationInfo.Location = new System.Drawing.Point(3, 458);
             this.gpApplicationInfo.Name = "gpApplicationInfo";
-            this.gpApplicationInfo.Size = new System.Drawing.Size(780, 184);
+            this.gpApplicationInfo.Size = new System.Drawing.Size(858, 184);
             this.gpApplicationInfo.TabIndex = 178;
             this.gpApplicationInfo.TabStop = false;
             this.gpApplicationInfo.Text = "Application Info";
@@ -448,7 +448,7 @@
             this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(2, 38);
             this.ctrlLicenseInfoWithFilter1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlLicenseInfoWithFilter1.Name = "ctrlLicenseInfoWithFilter1";
-            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(791, 452);
+            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(866, 413);
             this.ctrlLicenseInfoWithFilter1.TabIndex = 0;
             this.ctrlLicenseInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlLicenseInfoWithFilter1_OnLicenseSelected);
             // 
@@ -457,7 +457,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(792, 726);
+            this.ClientSize = new System.Drawing.Size(867, 695);
             this.Controls.Add(this.llShowLicenseInfo);
             this.Controls.Add(this.llShowLicenseHistory);
             this.Controls.Add(this.btnIssueLicense);

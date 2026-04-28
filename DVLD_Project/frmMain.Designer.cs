@@ -56,6 +56,10 @@
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ctrlDashboardHome1 = new DVLD_Project.Controls.ctrlDashboardHome();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2VSeparator3 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2VSeparator4 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,12 +94,11 @@
             this.manageTestTypesToolStripMenuItem});
             this.applicationsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicationsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.applicationsToolStripMenuItem.Image = global::DVLD_Project.Properties.Resources.Applications_64;
             this.applicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.applicationsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
             this.applicationsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(184, 70);
+            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(120, 70);
             this.applicationsToolStripMenuItem.Text = "Applications";
             // 
             // drivingLicensecToolStripMenuItem
@@ -318,40 +321,37 @@
             // 
             this.tsmiPeopleManagement.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiPeopleManagement.ForeColor = System.Drawing.Color.White;
-            this.tsmiPeopleManagement.Image = global::DVLD_Project.Properties.Resources.People_64;
             this.tsmiPeopleManagement.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiPeopleManagement.ImageTransparentColor = System.Drawing.Color.White;
             this.tsmiPeopleManagement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tsmiPeopleManagement.Name = "tsmiPeopleManagement";
             this.tsmiPeopleManagement.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.tsmiPeopleManagement.Size = new System.Drawing.Size(144, 70);
-            this.tsmiPeopleManagement.Text = "People";
+            this.tsmiPeopleManagement.Size = new System.Drawing.Size(177, 70);
+            this.tsmiPeopleManagement.Text = "People Management";
             this.tsmiPeopleManagement.Click += new System.EventHandler(this.tsmiPeopleManagement_Click);
             // 
             // driversToolStripMenuItem
             // 
             this.driversToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driversToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.driversToolStripMenuItem.Image = global::DVLD_Project.Properties.Resources.Drivers_64;
             this.driversToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.driversToolStripMenuItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
             this.driversToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.driversToolStripMenuItem.Size = new System.Drawing.Size(147, 70);
-            this.driversToolStripMenuItem.Text = "Drivers";
+            this.driversToolStripMenuItem.Size = new System.Drawing.Size(180, 70);
+            this.driversToolStripMenuItem.Text = "Drivers Management";
             this.driversToolStripMenuItem.Click += new System.EventHandler(this.driversToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.usersToolStripMenuItem.Image = global::DVLD_Project.Properties.Resources.users_64;
             this.usersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usersToolStripMenuItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(136, 70);
-            this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(169, 70);
+            this.usersToolStripMenuItem.Text = "Users Management";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
             // accountSettingsToolStripMenuItem
@@ -362,12 +362,11 @@
             this.signOutToolStripMenuItem});
             this.accountSettingsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountSettingsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.accountSettingsToolStripMenuItem.Image = global::DVLD_Project.Properties.Resources.account_settings_64;
             this.accountSettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.accountSettingsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
             this.accountSettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(216, 70);
+            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 70);
             this.accountSettingsToolStripMenuItem.Text = "Account Settings";
             // 
             // currentUserInfoToolStripMenuItem
@@ -417,7 +416,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 82);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(24);
-            this.pictureBox1.Size = new System.Drawing.Size(1042, 556);
+            this.pictureBox1.Size = new System.Drawing.Size(1042, 644);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -430,15 +429,47 @@
             this.ctrlDashboardHome1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ctrlDashboardHome1.Location = new System.Drawing.Point(0, 82);
             this.ctrlDashboardHome1.Name = "ctrlDashboardHome1";
-            this.ctrlDashboardHome1.Size = new System.Drawing.Size(1042, 556);
+            this.ctrlDashboardHome1.Size = new System.Drawing.Size(1042, 644);
             this.ctrlDashboardHome1.TabIndex = 3;
+            // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.Location = new System.Drawing.Point(140, 3);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 76);
+            this.guna2VSeparator1.TabIndex = 5;
+            // 
+            // guna2VSeparator2
+            // 
+            this.guna2VSeparator2.Location = new System.Drawing.Point(324, 3);
+            this.guna2VSeparator2.Name = "guna2VSeparator2";
+            this.guna2VSeparator2.Size = new System.Drawing.Size(10, 76);
+            this.guna2VSeparator2.TabIndex = 6;
+            // 
+            // guna2VSeparator3
+            // 
+            this.guna2VSeparator3.Location = new System.Drawing.Point(511, 3);
+            this.guna2VSeparator3.Name = "guna2VSeparator3";
+            this.guna2VSeparator3.Size = new System.Drawing.Size(10, 76);
+            this.guna2VSeparator3.TabIndex = 7;
+            // 
+            // guna2VSeparator4
+            // 
+            this.guna2VSeparator4.Location = new System.Drawing.Point(689, 3);
+            this.guna2VSeparator4.Name = "guna2VSeparator4";
+            this.guna2VSeparator4.Size = new System.Drawing.Size(10, 76);
+            this.guna2VSeparator4.TabIndex = 8;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(6)))), ((int)(((byte)(23)))));
-            this.ClientSize = new System.Drawing.Size(1042, 638);
+            this.ClientSize = new System.Drawing.Size(1042, 726);
+            this.Controls.Add(this.guna2VSeparator4);
+            this.Controls.Add(this.guna2VSeparator3);
+            this.Controls.Add(this.guna2VSeparator2);
+            this.Controls.Add(this.guna2VSeparator1);
             this.Controls.Add(this.ctrlDashboardHome1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -491,6 +522,10 @@
         private System.Windows.Forms.ToolStripMenuItem detainLicenseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem releaseDetainedLicenseToolStripMenuItem;
         private DVLD_Project.Controls.ctrlDashboardHome ctrlDashboardHome1;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator3;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator4;
     }
 }
 

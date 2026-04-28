@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNumberOfRecords = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -36,19 +39,17 @@
             this.cmsApplicationTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplicationTypes)).BeginInit();
             this.cmsApplicationTypes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumberOfRecords
             // 
             this.lblNumberOfRecords.AutoSize = true;
             this.lblNumberOfRecords.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumberOfRecords.Location = new System.Drawing.Point(104, 462);
+            this.lblNumberOfRecords.Location = new System.Drawing.Point(104, 258);
             this.lblNumberOfRecords.Name = "lblNumberOfRecords";
-            this.lblNumberOfRecords.Size = new System.Drawing.Size(19, 19);
+            this.lblNumberOfRecords.Size = new System.Drawing.Size(19, 21);
             this.lblNumberOfRecords.TabIndex = 23;
             this.lblNumberOfRecords.Text = "0";
             // 
@@ -56,9 +57,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 462);
+            this.label2.Location = new System.Drawing.Point(11, 258);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 19);
+            this.label2.Size = new System.Drawing.Size(87, 21);
             this.label2.TabIndex = 22;
             this.label2.Text = "#Records: ";
             // 
@@ -67,9 +68,9 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(87, 206);
+            this.lblTitle.Location = new System.Drawing.Point(87, 2);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(477, 42);
+            this.lblTitle.Size = new System.Drawing.Size(459, 47);
             this.lblTitle.TabIndex = 21;
             this.lblTitle.Text = "Manage Application Types";
             // 
@@ -78,35 +79,55 @@
             this.dgvApplicationTypes.AllowUserToAddRows = false;
             this.dgvApplicationTypes.AllowUserToDeleteRows = false;
             this.dgvApplicationTypes.AllowUserToOrderColumns = true;
-            this.dgvApplicationTypes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvApplicationTypes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dgvApplicationTypes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApplicationTypes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvApplicationTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApplicationTypes.ContextMenuStrip = this.cmsApplicationTypes;
-            this.dgvApplicationTypes.Location = new System.Drawing.Point(11, 260);
-            this.dgvApplicationTypes.Name = "dgvApplicationTypes";
-            this.dgvApplicationTypes.AllowUserToAddRows = false;
-            this.dgvApplicationTypes.AllowUserToDeleteRows = false;
-            this.dgvApplicationTypes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvApplicationTypes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvApplicationTypes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvApplicationTypes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvApplicationTypes.ColumnHeadersHeight = 38;
-            this.dgvApplicationTypes.EnableHeadersVisualStyles = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvApplicationTypes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvApplicationTypes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.dgvApplicationTypes.RowHeadersVisible = false;
-            this.dgvApplicationTypes.RowTemplate.Height = 34;
-            this.dgvApplicationTypes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvApplicationTypes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.dgvApplicationTypes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.dgvApplicationTypes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvApplicationTypes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvApplicationTypes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvApplicationTypes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            this.dgvApplicationTypes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
+            this.dgvApplicationTypes.Location = new System.Drawing.Point(11, 56);
+            this.dgvApplicationTypes.Name = "dgvApplicationTypes";
             this.dgvApplicationTypes.ReadOnly = true;
             this.dgvApplicationTypes.RowHeadersVisible = false;
+            this.dgvApplicationTypes.RowTemplate.Height = 34;
             this.dgvApplicationTypes.Size = new System.Drawing.Size(625, 180);
             this.dgvApplicationTypes.TabIndex = 20;
+            this.dgvApplicationTypes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dgvApplicationTypes.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvApplicationTypes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvApplicationTypes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvApplicationTypes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvApplicationTypes.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvApplicationTypes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.dgvApplicationTypes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.dgvApplicationTypes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvApplicationTypes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.dgvApplicationTypes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvApplicationTypes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvApplicationTypes.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvApplicationTypes.ThemeStyle.ReadOnly = true;
+            this.dgvApplicationTypes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvApplicationTypes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvApplicationTypes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.dgvApplicationTypes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvApplicationTypes.ThemeStyle.RowsStyle.Height = 34;
+            this.dgvApplicationTypes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            this.dgvApplicationTypes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             // 
             // cmsApplicationTypes
             // 
@@ -126,11 +147,6 @@
             // 
             // btnClose
             // 
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClose.Location = new System.Drawing.Point(493, 448);
-            this.btnClose.Name = "btnClose";
             this.btnClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
             this.btnClose.BorderRadius = 6;
             this.btnClose.BorderThickness = 1;
@@ -138,29 +154,22 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnClose.Location = new System.Drawing.Point(493, 244);
+            this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.btnClose.Size = new System.Drawing.Size(143, 43);
             this.btnClose.TabIndex = 25;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.Application_Types_512;
-            this.pictureBox1.Location = new System.Drawing.Point(190, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 199);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmListApplicationTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 496);
+            this.ClientSize = new System.Drawing.Size(647, 300);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblNumberOfRecords);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitle);
@@ -173,7 +182,6 @@
             this.Load += new System.EventHandler(this.frmListApplicationTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplicationTypes)).EndInit();
             this.cmsApplicationTypes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,7 +190,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button btnClose;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNumberOfRecords;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitle;

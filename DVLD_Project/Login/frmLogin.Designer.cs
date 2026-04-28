@@ -225,7 +225,7 @@ namespace DVLD_Project.Login
             this.chkRememberMe.ForeColor = System.Drawing.Color.White;
             this.chkRememberMe.Location = new System.Drawing.Point(47, 274);
             this.chkRememberMe.Name = "chkRememberMe";
-            this.chkRememberMe.Size = new System.Drawing.Size(101, 17);
+            this.chkRememberMe.Size = new System.Drawing.Size(98, 17);
             this.chkRememberMe.TabIndex = 144;
             this.chkRememberMe.Text = "remember me";
             this.chkRememberMe.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(160)))));
@@ -248,7 +248,7 @@ namespace DVLD_Project.Login
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnClose.Location = new System.Drawing.Point(47, 360);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnClose.Name = "btnExit";
+            this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btnClose.Size = new System.Drawing.Size(123, 38);
             this.btnClose.TabIndex = 139;
