@@ -368,8 +368,12 @@ namespace DVLD_Project.Global_Classes
         {
             label.Font = ModernFont(label.Font, label.Font.Style);
 
-            if (label.ForeColor == SystemColors.ControlText || label.ForeColor == Color.Black)
+            if (label.ForeColor == SystemColors.ControlText ||
+                label.ForeColor == Color.Black ||
+                (IsInsideGunaGroupBox(label) && label.ForeColor == Color.White))
+            {
                 label.ForeColor = Text;
+            }
         }
 
         private static void StyleCheckBox(CheckBox checkBox)
@@ -460,6 +464,21 @@ namespace DVLD_Project.Global_Classes
             while (parent != null)
             {
                 if (ShouldSkipChildStyling(parent))
+                    return true;
+
+                parent = parent.Parent;
+            }
+
+            return false;
+        }
+
+        private static bool IsInsideGunaGroupBox(Control control)
+        {
+            Control parent = control.Parent;
+
+            while (parent != null)
+            {
+                if (parent is Guna2GroupBox)
                     return true;
 
                 parent = parent.Parent;

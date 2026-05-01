@@ -72,7 +72,7 @@ namespace DVLD_BuisnessLayer
 
         private bool _AddNewInternationalLicense()
         {
-            //call DataAccess Layer 
+            //call DataAccess Layer
 
             this.InternationalLicenseID =
                 clsInternationalLicenseData.AddNewInternationalLicense(this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
